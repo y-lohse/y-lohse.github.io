@@ -1,0 +1,820 @@
+@charset "CP850";
+/* line 14, ../scss/qb/resets/_boxreset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 31, ../scss/qb/resets/_boxreset.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 36, ../scss/qb/resets/_boxreset.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/* line 41, ../scss/qb/resets/_boxreset.scss */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*
+ * miscellaneous stuff, not really box related but always needed
+ */
+/* line 49, ../scss/qb/resets/_boxreset.scss */
+img {
+  border: 0;
+}
+
+/* line 55, ../scss/qb/resets/_boxreset.scss */
+a:focus {
+  outline: thin dotted;
+}
+/* line 61, ../scss/qb/resets/_boxreset.scss */
+a:active, a:hover {
+  outline: 0;
+}
+
+/* line 67, ../scss/qb/resets/_boxreset.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 72, ../scss/qb/resets/_boxreset.scss */
+[hidden] {
+  display: none;
+}
+
+/* line 76, ../scss/qb/resets/_boxreset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 1, ../scss/qb/resets/_typereset.scss */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-family: "Museo Sans 300", Arial;
+}
+
+/* line 6, ../scss/qb/resets/_typereset.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Museo Sans 300", Georgia, Trebuchet, Helvetica, Arial;
+  font-weight: normal;
+}
+
+/* line 12, ../scss/qb/resets/_typereset.scss */
+ul, ol {
+  list-style-position: inside;
+}
+
+/* line 15, ../scss/qb/resets/_typereset.scss */
+ol {
+  list-style-type: decimal;
+}
+
+/* line 21, ../scss/qb/resets/_typereset.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 27, ../scss/qb/resets/_typereset.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 30, ../scss/qb/resets/_typereset.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 35, ../scss/qb/resets/_typereset.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 41, ../scss/qb/resets/_typereset.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 46, ../scss/qb/resets/_typereset.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 53, ../scss/qb/resets/_typereset.scss */
+pre,
+code,
+samp {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: monospace, serif;
+}
+
+/* line 61, ../scss/qb/resets/_typereset.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* line 1, ../scss/qb/resets/_formreset.scss */
+textarea {
+  overflow: auto;
+  font-family: inherit;
+  resize: vertical;
+  font-size: 100%;
+}
+
+/* line 10, ../scss/qb/resets/_formreset.scss */
+button,
+input,
+select {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+/* line 17, ../scss/qb/resets/_formreset.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/* line 23, ../scss/qb/resets/_formreset.scss */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/* line 28, ../scss/qb/resets/_formreset.scss */
+label, input[type="button"], input[type="submit"], input[type="image"], button {
+  cursor: pointer;
+}
+
+/* line 34, ../scss/qb/resets/_formreset.scss */
+button {
+  width: auto;
+  overflow: visible;
+}
+
+/* line 48, ../scss/qb/resets/_formreset.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 54, ../scss/qb/resets/_formreset.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+/* line 60, ../scss/qb/resets/_formreset.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 66, ../scss/qb/resets/_formreset.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 2, ../scss/qb/modules/_utility.scss */
+html {
+  font-size: 16px;
+}
+
+/* line 12, ../scss/qb/modules/_utility.scss */
+.clearfix:before, .grid:before,
+.clearfix:after,
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 20, ../scss/qb/modules/_utility.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@media print {
+  /* line 2, ../scss/qb/modules/_print.scss */
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  /* Black prints faster: sanbeiji.com/archives/953 */
+  /* line 9, ../scss/qb/modules/_print.scss */
+  a, a:visited {
+    color: #444444 !important;
+    text-decoration: underline;
+  }
+
+  /* line 13, ../scss/qb/modules/_print.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 16, ../scss/qb/modules/_print.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 19, ../scss/qb/modules/_print.scss */
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+  }
+
+  /* Don't show links for images, or javascript/internal links */
+  /* line 22, ../scss/qb/modules/_print.scss */
+  pre, blockquote {
+    border: 1px solid #999999;
+    page-break-inside: avoid;
+  }
+
+  /* line 26, ../scss/qb/modules/_print.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* css-discuss.incutio.com/wiki/Printing_Tables */
+  /* line 29, ../scss/qb/modules/_print.scss */
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 35, ../scss/qb/modules/_print.scss */
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 39, ../scss/qb/modules/_print.scss */
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}
+/* line 7, ../scss/qb/modules/_grid.scss */
+[class*='col-'] {
+  float: left;
+  padding-right: 20px;
+}
+/* line 11, ../scss/qb/modules/_grid.scss */
+.grid [class*='col-']:last-of-type {
+  padding-right: 0;
+}
+
+/* line 18, ../scss/qb/modules/_grid.scss */
+.col-1-1 {
+  width: 100%;
+}
+
+/* line 21, ../scss/qb/modules/_grid.scss */
+.col-1-2 {
+  width: 50%;
+}
+
+/* line 24, ../scss/qb/modules/_grid.scss */
+.col-1-3 {
+  width: 33.33%;
+}
+
+/* line 27, ../scss/qb/modules/_grid.scss */
+.col-2-3 {
+  width: 66.66%;
+}
+
+@media only screen and (max-width: 320px) {
+  /* line 32, ../scss/qb/modules/_grid.scss */
+  [class*='col-'] {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+/* line 73, ../scss/qb/modules/_rwd.scss */
+img,
+table,
+td,
+blockquote,
+code,
+pre,
+textarea,
+input,
+video {
+  max-width: 100%;
+}
+
+/*
++---------------------------------------------------------------------+
+|        _                               _         _                  |
+|       | |_  _   _  _ __    ___  _ __  | |  __ _ | |_  ___           |
+|       | __|| | | || '_ \  / _ \| '_ \ | | / _` || __|/ _ \          |
+|       | |_ | |_| || |_) ||  __/| |_) || || (_| || |_|  __/          |
+|        \__| \__, || .__/  \___|| .__/ |_| \__,_| \__|\___|          |
+|             |___/ |_|          |_|                                  |
+|                                                                     |
+|                                                                     |
+| URL: http://typeplate.com                                           |
+| VERSION: 1.0.1                                                      |
+| Github: https://github.com/typePlate/typeplate.github.com           |
+| AUTHORS: Zachary Kain (@zakkain) & Dennis Gaebel (@gryghostvisuals) |
+| LICENSE: Creative Commmons                                          |
+| http://creativecommons.org/licenses/by/3.0                          |
+|                                                                     |
++---------------------------------------------------------------------+
+*/
+@font-face {
+  font-family: "Ampersand";
+  src: local("Georgia"), local("Garamond"), local("Palatino"), local("Book Antiqua");
+  unicode-range: U+0026;
+}
+
+@font-face {
+  font-family: "Ampersand";
+  src: local("Georgia");
+  unicode-range: U+270C;
+}
+
+/* line 262, ../scss/qb/modules/_typeplate.scss */
+body {
+  word-wrap: break-word;
+}
+
+/* line 266, ../scss/qb/modules/_typeplate.scss */
+pre code {
+  word-wrap: normal;
+}
+
+/**
+ * Dropcap Sass @include
+ * Use the following Sass @include with any selector you feel necessary.
+ *
+	@include dropcap($float: left, $font-size: 4em, $font-family: inherit, $text-indent: 0, $margin: inherit, $padding: inherit, $color: inherit, $lineHeight: 1, $bg: transparent);
+ *
+ * Extend this object into your custom stylesheet.
+ *
+ */
+/* line 377, ../scss/qb/modules/_typeplate.scss */
+html {
+  font: normal 112.5%/1.35 "Museo Sans 300", Arial;
+}
+
+/* line 381, ../scss/qb/modules/_typeplate.scss */
+body {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+  color: #dadada;
+}
+
+/* line 397, ../scss/qb/modules/_typeplate.scss */
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 0;
+}
+
+/* line 412, ../scss/qb/modules/_typeplate.scss */
+.tera {
+  font-size: 117px;
+  font-size: 7.3125rem;
+  margin-bottom: 0.18462rem;
+}
+
+/* line 412, ../scss/qb/modules/_typeplate.scss */
+.giga {
+  font-size: 90px;
+  font-size: 5.625rem;
+  margin-bottom: 0.24rem;
+}
+
+/* line 412, ../scss/qb/modules/_typeplate.scss */
+.mega {
+  font-size: 72px;
+  font-size: 4.5rem;
+  margin-bottom: 0.3rem;
+}
+
+/* line 412, ../scss/qb/modules/_typeplate.scss */
+.alpha, h1 {
+  font-size: 60px;
+  font-size: 3.75rem;
+  margin-bottom: 0.36rem;
+}
+
+/* line 412, ../scss/qb/modules/_typeplate.scss */
+.beta, h2 {
+  font-size: 48px;
+  font-size: 3rem;
+  margin-bottom: 0.45rem;
+}
+
+/* line 412, ../scss/qb/modules/_typeplate.scss */
+.gamma, h3 {
+  font-size: 36px;
+  font-size: 2.25rem;
+  margin-bottom: 0.6rem;
+}
+
+/* line 412, ../scss/qb/modules/_typeplate.scss */
+.delta, h4, .home .main-title {
+  font-size: 24px;
+  font-size: 1.5rem;
+  margin-bottom: 0.9rem;
+}
+
+/* line 412, ../scss/qb/modules/_typeplate.scss */
+.epsilon, h5 {
+  font-size: 21px;
+  font-size: 1.3125rem;
+  margin-bottom: 1.02857rem;
+}
+
+/* line 412, ../scss/qb/modules/_typeplate.scss */
+.zeta, h6, .home .main-subtitle {
+  font-size: 18px;
+  font-size: 1.125rem;
+  margin-bottom: 1.2rem;
+}
+
+/* line 452, ../scss/qb/modules/_typeplate.scss */
+p {
+  margin: 0 0 0;
+}
+/* line 454, ../scss/qb/modules/_typeplate.scss */
+p + p {
+  text-indent: 0;
+  margin-top: 0;
+}
+
+/* line 478, ../scss/qb/modules/_typeplate.scss */
+abbr,
+acronym,
+blockquote,
+code,
+dir,
+kbd,
+listing,
+plaintext,
+q,
+samp,
+tt,
+var,
+xmp {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -o-hyphens: none;
+  hyphens: none;
+}
+
+/* line 495, ../scss/qb/modules/_typeplate.scss */
+pre code {
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap;
+}
+
+/* line 500, ../scss/qb/modules/_typeplate.scss */
+pre {
+  white-space: pre;
+}
+
+/* line 504, ../scss/qb/modules/_typeplate.scss */
+code {
+  white-space: pre;
+  font-family: monospace;
+}
+
+/**
+ * Abbreviations Markup
+ *
+	<abbr title="hyper text markup language">HMTL</abbr>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/* line 521, ../scss/qb/modules/_typeplate.scss */
+abbr {
+  font-variant: small-caps;
+  font-weight: 600;
+  text-transform: lowercase;
+  color: gray;
+}
+/* line 523, ../scss/qb/modules/_typeplate.scss */
+abbr:hover {
+  cursor: help;
+}
+
+/* line 537, ../scss/qb/modules/_typeplate.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fefefe;
+}
+
+/**
+ * Lining Definition Style Markup
+ *
+	<dl class="lining">
+		<dt><b></b></dt>
+		<dd></dd>
+	</dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/* line 318, ../scss/qb/modules/_typeplate.scss */
+.lining dt,
+.lining dd {
+  display: inline;
+  margin: 0;
+}
+/* line 325, ../scss/qb/modules/_typeplate.scss */
+.lining dt + dt:before,
+.lining dd + dt:before {
+  content: "\A";
+  white-space: pre;
+}
+/* line 333, ../scss/qb/modules/_typeplate.scss */
+.lining dd + dd:before {
+  content: ", ";
+}
+/* line 337, ../scss/qb/modules/_typeplate.scss */
+.lining dd:before {
+  content: ": ";
+  margin-left: -0.2rem;
+}
+
+/**
+ * Dictionary Definition Style Markup
+ *
+	<dl class="dictionary-style">
+		<dt><b></b></dt>
+			<dd></dd>
+	</dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/* line 345, ../scss/qb/modules/_typeplate.scss */
+.dictionary-style dt {
+  display: inline;
+  counter-reset: definitions;
+}
+/* line 349, ../scss/qb/modules/_typeplate.scss */
+.dictionary-style dt + dt:before {
+  content: ", ";
+  margin-left: -0.2rem;
+}
+/* line 355, ../scss/qb/modules/_typeplate.scss */
+.dictionary-style dd {
+  display: block;
+  counter-increment: definitions;
+}
+/* line 358, ../scss/qb/modules/_typeplate.scss */
+.dictionary-style dd:before {
+  content: counter(definitions, decimal) ". ";
+}
+
+/**
+ * Stats Tab Markup
+ *
+	<ul class="stats-tabs">
+		<li><a href="#">[value]<b>[name]</b></a></li>
+	</ul>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/* line 589, ../scss/qb/modules/_typeplate.scss */
+.stats-tabs {
+  padding: 0;
+}
+/* line 591, ../scss/qb/modules/_typeplate.scss */
+.stats-tabs li {
+  display: inline-block;
+  margin: 0 0.625rem 0 0;
+  padding: 0 0.625rem 0 0;
+  border-right: 0.125rem solid #cccccc;
+}
+/* line 596, ../scss/qb/modules/_typeplate.scss */
+.stats-tabs li:last-child {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+/* line 601, ../scss/qb/modules/_typeplate.scss */
+.stats-tabs li a {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+/* line 605, ../scss/qb/modules/_typeplate.scss */
+.stats-tabs li a b {
+  display: block;
+  margin: 0.125rem 0 0 0;
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+
+/**
+ * Blockquote Markup
+ *
+	<blockquote cite="">
+		<p>&Prime;&Prime;</p>
+		<cite>
+			<small><a href=""></a></small>
+		</cite>
+	</blockquote>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Pull Quotes Markup
+ *
+	<aside class="pull-quote">
+		<blockquote>
+			<p></p>
+		</blockquote>
+	</aside>
+ *
+ * Extend this object into your custom stylesheet.
+ *
+ */
+/* line 685, ../scss/qb/modules/_typeplate.scss */
+.pull-quote {
+  position: relative;
+  padding: 1em;
+}
+/* line 667, ../scss/qb/modules/_typeplate.scss */
+.pull-quote:before, .pull-quote:after {
+  height: 1em;
+  opacity: 0.15;
+  position: absolute;
+  font-size: 4em;
+}
+/* line 673, ../scss/qb/modules/_typeplate.scss */
+.pull-quote:before {
+  content: '“';
+  top: 0em;
+  left: 0em;
+}
+/* line 678, ../scss/qb/modules/_typeplate.scss */
+.pull-quote:after {
+  content: '”';
+  bottom: 0em;
+  right: 0em;
+}
+
+/**
+ * Figures Markup
+ *
+	<figure>
+		<figcaption>
+			<strong>Fig. 4.2 | </strong>Type Anatomy, an excerpt from Mark Boulton's book<cite title="http://designingfortheweb.co.uk/book/part3/part3_chapter11.php">"Designing for the Web"</cite>
+		</figcaption>
+	</figure>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Footnote Markup : Replace 'X' with your unique number for each footnote
+ *
+	<article>
+		<p><sup><a href="#fn-itemX" id="fn-returnX"></a></sup></p>
+		<footer>
+			<ol class="foot-notes">
+				<li id="fn-itemX"><a href="#fn-returnX">↩</a></li>
+			</ol>
+		</footer>
+	</article>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/* line 4, ../scss/style.scss */
+html,
+body {
+  background-color: #303030;
+}
+
+/* line 8, ../scss/style.scss */
+hr {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 40px auto;
+  background-image: url("../img/mobius.png");
+  background-color: #ededed;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  border: none;
+  border-radius: 50%;
+}
+
+/* line 21, ../scss/style.scss */
+p {
+  margin-bottom: 18px;
+}
+
+/* line 25, ../scss/style.scss */
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding-top: 10px;
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  /* line 25, ../scss/style.scss */
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* line 37, ../scss/style.scss */
+.home .main-title {
+  text-align: center;
+  margin: 30px auto;
+  font-family: "Museo Sans 100";
+}
+
+/* line 43, ../scss/style.scss */
+.home .main-subtitle {
+  color: #dadada;
+}
+
+/* line 47, ../scss/style.scss */
+.home .cloak {
+  color: #a5a5a5;
+}
+
+/* line 50, ../scss/style.scss */
+.home .stress {
+  color: #fefefe;
+  font-weight: normal;
+}
