@@ -22,3 +22,60 @@ $default-transition-duration: 0.2s;
 @import "qb/all";
 
 @include register-breakpoints($mobile, $tablet, $small-desktop, $large-desktop);
+
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'icomoon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-github:before,
+.icon-twitter:before, 
+.icon-file-pdf:before, 
+.icon-linkedin:before, 
+.icon-file-css:before, 
+.icon-book:before, 
+.icon-pen:before {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-github:before {
+	content: "\e000";
+}
+.icon-twitter:before {
+	content: "\e002";
+}
+.icon-file-pdf:before {
+	content: "\e003";
+}
+.icon-linkedin:before {
+	content: "\e004";
+}
+.icon-file-css:before {
+	content: "\e001";
+}
+.icon-book:before {
+	content: "\e005";
+}
+.icon-pen:before {
+	content: "\e006";
+}
