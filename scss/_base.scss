@@ -1,0 +1,24 @@
+@import "compass";
+
+$body-copy-font: "Museo Sans 300", Arial;
+$heading-font: "Museo Sans 300", Georgia, Trebuchet, Helvetica, Arial;
+$font-base: 16;
+
+$background-color: #303030;
+$font-color: #dadada;
+$stress-color: #fefefe;
+$cloak-color: #a5a5a5;
+
+$large-desktop: 1280px;
+$small-desktop: 960px;
+$tablet: 768px;
+$mobile: 320px;
+
+$grid-collapse-below: $mobile;
+
+$default-transition-function: ease-in;
+$default-transition-duration: 0.2s;
+
+@import "qb/all";
+
+@include register-breakpoints($mobile, $tablet, $small-desktop, $large-desktop);

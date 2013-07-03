@@ -1,0 +1,53 @@
+@import "base";
+
+html,
+body{
+	background-color: $background-color;
+}
+
+hr{
+	$size: 80px;
+	display: block;
+	width: $size;
+	height: $size;
+	margin: 40px auto;
+	background-image: url('../img/mobius.png');
+	background-color: #ededed;
+	@include background-size(contain);
+	border: none;
+	border-radius: 50%;
+}
+
+p{
+	margin-bottom: 18px;
+}
+
+.container{
+	max-width: 600px;
+	margin: auto;
+	padding-top: 10px;
+	
+	@include width-matches($mobile){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+//homepage
+.home .main-title{
+	@extend .delta;
+	text-align: center;
+	margin: 30px auto;
+	font-family: "Museo Sans 100";
+}
+.home .main-subtitle{
+	@extend .zeta;
+	color: $font-color;
+}
+.home .cloak{
+	color: $cloak-color;
+}
+.home .stress{
+	color: $stress-color;
+	font-weight: normal;
+}
