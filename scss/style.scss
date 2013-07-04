@@ -35,13 +35,13 @@ p{
 
 //homepage
 .home .main-title{
-	@extend .delta;
-	text-align: center;
-	margin: 30px auto;
+	@extend .alpha;
+	margin: 30px auto 13px;
 	font-family: "Museo Sans 100";
+	@include hyphens(none);
 }
 .home .main-subtitle{
-	@extend .zeta;
+	@extend .delta;
 	color: $font-color;
 }
 .home .cloak{
