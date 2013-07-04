@@ -1,0 +1,273 @@
+---
+layout: post
+title: Going mobile
+tags:
+- Websites
+status: draft
+type: post
+published: false
+meta:
+  _yoast_wpseo_linkdex: '0'
+  _edit_last: '1'
+  _yoast_wpseo_focuskw: ''
+  _yoast_wpseo_title: ''
+  _yoast_wpseo_metadesc: ''
+  _yoast_wpseo_meta-robots-noindex: '0'
+  _yoast_wpseo_meta-robots-nofollow: '0'
+  _yoast_wpseo_meta-robots-adv: none
+  _yoast_wpseo_sitemap-include: ! '-'
+  _yoast_wpseo_sitemap-prio: ! '-'
+  _yoast_wpseo_canonical: ''
+  _yoast_wpseo_redirect: ''
+---
+<p>A couple of weeks ago, we (at my working place) decided it was finally time to go mobile. We were of course aware of the necessity before that, but schedules and other projects had kept us from doing it earlier. Our site <a href="http://get-formation.fr">get-formation.fr</a> is now responsive and I thought I'd share a little bit how the process went for us. It might especially be interesting because this is no theory : we couldn't do mobile first design, the site was already designed; we couldn't think all of our css ahead, as there was already plenty of existing css that had to stay; it was really about turning an existing, desktop oriented website into a suitable mobile experience.
+</p>
+
+<h1>Choice</h1>
+
+<h1>Complex navigation</h1>
+
+<p>
+One of the thing I gave the most thoughts is what to do with the menu. On desktop, we have a common header that contains the main menu, and usually a second, vertical menu related to the page you are currently viewing.
+</p>
+
+<p>
+<a href="http://yannick-lohse.fr/wp-content/uploads/2013/01/get-double-menu.jpg"><img src="http://yannick-lohse.fr/wp-content/uploads/2013/01/get-double-menu.jpg" alt="get-double-menu" width="600" height="486" class="aligncenter size-full wp-image-649" /></a>
+</p>
+
+<p>
+That works nice, but is a no-go on mobile. I rapidly decided to leave the header out entirely. On desktop, it creates a strong branding while also allowing to quickly do some traversal navigation. While the branding had to remain on mobile, the traversal navigation wasn't really needed, as users probably won't spend a larger amount of time using the site on their mobile device.
+</p>
+
+<p>
+But the side menu had to stay in some form or fashion. I searched for mobile navigation patterns on mobile, and found Brad Frost's great posts which cover pretty much all of them. Our menus are of the gigantic flavor; On average, we have 20-30 links to display. One of the patterns quickly drew my attention, because i had noticed it before : the fly-out menu, sometimes called off-canvas menu. The idea is to hide the menu completely, and when the user presses the menu button, it flies out from the left and covers the page. This allows to efficiently display very big menus, while displaying content first.
+</p>
+
+insert screen
+
+Even though it's not yet widely used on websites, I think it's already familiar to most smartphone users; facebook uses it for their apps, Spotify as well, and probably more. Just to be sure, we decided to label the button with "Menu". Above this menu, we added a search box, something that is starting to be part of this pattern. We also included a back-to-the-homepage button, just in case users get lost.
+
+<h1>Sass</h1>
+
+<p>
+Before even starting the redesign, I decided it would be wise to make the soon-to-be-old CSS more maintainable. It wasn't <em>that</em> bad, but I did have a bit of code repetition, there was unused CSS here and there... I also had some CSS3 properties that were sometimes prefixed, sometimes un-prefixed. And I knew i'd soon be writing a lot of media queries.
+</p>
+
+<p>
+Plus, I had started using CSS preprocessors on other projects, and once you start using them it really is a pain to get back to plain old CSS. I had been using LESS for a while, combined with the Twitter Bootstrap. The Twitter Bootstrap was no go here, since i didn't need the whole framework at all.
+</p>
+
+<p>
+But I also wanted to try SASS. I had been hearing lots of good things about it, the Compass extension looked not only super useful, and came with the promise of not generating too much extra css (unlike Twitter Bootstrap).
+</p>
+
+<h2>Using SASS</h2>
+
+<p>
+So I went with SASS, and it's great, i like it a lot more than LESS. Even though i'm used to the command line, I wasn't that keen on having to run commands to set up projects and start monitoring changes. I looked for GUI apps. With LESS, I used Winless which is excellent. I gave Scout App a try and it wasn't great, project configuration was a pain and the interface is really slow.
+</p>
+
+<p>
+I gave the command line a try, and it turned out easy enough to use. Inside my folder containing the scss files, I have a simple bat file containing this :
+</p>
+
+<pre>
+compass watch
+</pre>
+
+<p>
+And sitting right next to it, I have a simple config.rb file :
+</p>
+
+<pre>
+config.rb
+</pre>
+
+<p>
+I just run the bat file when I start working in the morning, and then forget about it.
+</p>
+
+<h2><Moving to SASS/h2>
+
+<p>
+The learning curve was fairly simple. I started by converting all my plain css to SASS synthax. Not that many things changed in the first place. Gradeints and css3 in general got a big win.
+</p>
+
+<pre>
+#mydiv{
+  //before SASS
+  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0.5))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.5) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.5) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.5) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.5) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#80ffffff',GradientType=0 ); /* IE6-9 */
+
+  //after SASS
+  @include background(linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)));
+}
+</pre>
+
+<p>
+I threw in some variables too so I wouldn't repeat myself over and over again, especially regarding fonts. I only wrote a couple of mixins myself, most of them are provided by compass anyway. I did write one that I used a lot, and it handles font sizing. I use the <em>rem</em> unit (for root em) all over the place. It's fantastic - it works just like ems, except it isn't affected by the cascade. So 1rem is <b>always</b> 1rem, no matter how many times you defined that size prior to that.
+</p>
+
+<p>
+The support for <a href="http://caniuse.com/#search=rem">rem</a> is really good, but unfortunately IE8 isn't on the list- and I had to support it. There is a little trick where you set the base font-size so that 1rem=10px, and then you always define your font-size twice with almost the same value, once for rem, once for pixels :
+</p>
+
+<pre>
+//set 1rem=10px
+html{
+  font-size: 62.5%;
+}
+
+//from now on you use this to define a font size
+#mydiv{
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+//my mixin
+@mixin font-size($pxsize){
+  font-size: #{$pxsize}px;
+  font-size: #{$pxsize/10}rem;
+}
+
+//so now
+#mydiv{
+  @include font-size(20);
+}
+</pre>
+
+<p>
+The mixin is not very impressive, but it keeps you from forgetting to add the pixel value at some points (as had happened to me before moving to SASS).
+</p>
+
+<h3>File organization</h3>
+
+<p>
+A while later, I did a second pass in this time dealt with code repetitions and made more important changes. I created a <em>_core.scss</em> file, that produces 0 output - it only loads compass, defines all core variables like fonts or colors and creates my custom mixins. Also included are 2 <a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#placeholder_selectors_">placeholder selectors</a>, one for image replacement and one for submit buttons.
+</p>
+
+<p>
+Then I have a _base.css with... well, basic css rules and utility classes. This in turn is requested by a file named common.scss (along with normalize.scss). common.scss is then included in every page of the site, as it handles elements that can be found anywhere (header, footer, etc.).
+</p>
+
+<p>
+And finally, every other set of pages has its own scss file that is loaded only on the pages were it's needed. Those files don't actually contain much scss, because most of the time the pages display smaller modules (like news boxes, sliders, menus). And those modules in turn are SASS partials. So a common scss file actually looks like this :
+</p>
+
+<pre>
+$couleur-programme: #07acad;
+$lateral-menu-color: #fff;
+$lateral-menu-background: #005b61;
+$lateral-menu-border: 2px dotted #fff;
+$lateral-menu-link-color: #fff;
+$lateral-menu-active-color: #b6ffff;
+$next-page-color: #fff;
+$next-page-arrow-color: $couleur-programme;
+$slides-width: 720px;
+$concours-background: #706a62;
+$rencontreznous-titre-background: #dabd03;
+$rencontreznous-background: #0d9697;
+$rencontreznous-lieu-color: #ffdd00;
+$rencontreznous-border-color: #ffffff;
+$mobile-header-background: $couleur-programme;
+
+@import "core";
+@import "partials/lateralmenu";
+@import "partials/mobileheader";
+@import "partials/news";
+@import "partials/rencontreznous";
+@import "partials/slides";
+@import "partials/nextpage";
+@import "programmes";
+@import "associations";
+@import "concours";
+@import "cours";
+@import "double-diplomes";
+@import "drapeaux";
+
+//followed by more or less 50 lines of really specific css.
+</pre>
+
+<h1>grids</h1>
+
+<p>
+One of the core principles of RWD, we're told, is : take all of your blocks, and stack'em instead of having them side by side. 
+</p>
+
+<p>
+I used the 960 grid system to build the first version of get-formation.fr, so this, i figured, wouldn't be a problem. I wasn't making a heavy use of grids anyway, and there are no particularly complex layouts on the websites, so this shouldn't be an issue.
+</p>
+
+<p>
+The only thing I decided to do was to actually change the grid system; 960.gs is not responsive and generates quite a bit of CSS, most of it unused. But changing from one grid system to another must be easy.
+</p>
+
+<h1>testing</h1>
+
+<p>
+While coding, I used firefoxs responsive design view to see how the webpages were rendered on smaller resolutions. It's a really handy tool, with presets for the most common screen resolutions, and it's easy to use in combination with the inspector. The only problem with it is that it obviously uses its own rendering engine, which is widely different from what you will find on mobile. When I thought I was done, i started my firefox browser on my smartphone... and discovered that a lot of things were broken.
+</p>
+
+<p>
+In the end it was mostly problems with a few not-so-much supported properties like fixed positioning. But bottom line is, you absolutely need to test your website on the actual devices to detect problems, resizing the window is not enough. Personally I ended up scavenging around in the offices to find a couple of phones I could borrow for an afternoon but if you're on your own, you probably don't have that option. 
+</p>
+
+<p>
+I haven't tested tools like <a href="http://www.browserstack.com/">browserstack</a>, but I definitely think they are worth a try.Not so much for the IE testing (come on, it's not that bad), but for cross platform mobile testing.
+</p>
+
+<p>
+ I downloaded <a href="http://html.adobe.com/edge/inspect/">Adobe Edge Inspect</a> as well, but haven't given it a shot yet. You still need the different devices for Inspect to work, but a DOM inspector on the phone would be greatly appreciated. I read about the <a href="https://hacks.mozilla.org/2012/08/remote-debugging-on-firefox-for-android/">firefox remote debugging</a>, and it's exciting - but I really wish that would be an inspector rather than a debugger.
+</p>
+
+<h1>Sprites</h1>
+
+<p>
+Aside from the all too well known responsive image problem, I actually faced some issues with sprites. I use <a href="http://compass-style.org/help/tutorials/spriting/">compass sprites</a> to generate mine,and it's probably one of the compass features I love most. My scss usually lloks like this :
+</p>
+
+<pre>
+@import "commun/flags/*.png";
+@include all-flags-sprites(true);
+</pre>
+
+<p>
+That's it, thrown in a couple of classes in the html and you're done. This wasn't much of an issue, except for pages like <a href="http://get-formation.fr/pole-management">this one</a>, where the 3 big panels are sprited. When the dimensions shrink, I wanted those to shrink as well, especially on tablet-sized displays. But with compass generating the css, I really hadn't much of a handle on this. One solution would have been to generate a second set of sprited images and use media queries to display one or the other. But in the end, it wasn't necessary, as luckily even with only a small part of the image displayed the result looks good.
+</p>
+
+<h1>Taking advantage of mobile capabilities</h1>
+
+<p>
+Maybe this was the most painful issue I faced of all. Designing and coding a responsive website is all good and well, but the idea is also to take advantage of the clients capabilities, such as making phone calls, geographic positioning, etc. But that's actually hard to do well... A simple example are tel links.
+</p>
+
+<pre>
+<a href="tel:+00 33 12 34 56 78">Call me</a>
+</pre>
+
+<p>
+On mobile phone,s clicking this link will start a new phone call, which is awesome. You know what's not awesome at all? It's when you click on the link on a client that isn't a phone, like a desktop computer. You'll be redirect to an error page managed by the browser you're using. <a href="tel:+00 33 12 34 56 78">Try it for yourself !</a>
+</p>
+
+<p>
+I mean, sure, the desktop browser doesn't know how to handle such a link, but I think we could find a graceful solution here. IMHO, it would be nice to let the user decide what to do- he might want to do nothing, or pass the link to skype, or whatever. Just let him associate some software with tel links like it's done with magnet links or spotify links.
+</p>
+
+<p>
+I also think this concept should even be extended to other kind of links, such as maps or social apps. When I link to our facebook page from the mobile website, I'd like it to open either a native app or <a href="https://m.facebook.com/">the mobile version</a>...whatever the user decided is the best for him. Same goes for links to physical addresses. Maybe the user wants google maps, maybe he wants bing maps, maybe something else. Just give me a generic href="map:My address" link and let the user decide what to do with it.
+</p>
+
+<p>
+Right now this is a bet messy, as sometimes the OS will decide for the user, sometimes the browser will, and sometimes the user... but it surely isn't very homogeneous.
+</p>
+
+<h1>Summing it up</h1>
+
+<p>
+The overall process went really smooth, far more then I expected. I had previously created responsive websites (such as my blog), but none of that scale. Some situations sure provided some headaches - getting the fly-out menu to work cross-browser without position: fixed was a serious challenge - but nothing that couldn't be overcome. I like the result;  I actually tend to find the mobile website more usable than the desktop version, but I'm not really one of our average visitors, so it's not necessarily relevant. While there is definitely room for improvements, the benefits of finally providing a good mobile user experience was certainly worth the efforts.
+</p>

@@ -1,0 +1,93 @@
+---
+layout: post
+title: Going mobile - the theory
+tags:
+- Websites
+status: draft
+type: post
+published: false
+meta:
+  _yoast_wpseo_linkdex: '0'
+  _edit_last: '1'
+  _yoast_wpseo_focuskw: ''
+  _yoast_wpseo_title: ''
+  _yoast_wpseo_metadesc: ''
+  _yoast_wpseo_meta-robots-noindex: '0'
+  _yoast_wpseo_meta-robots-nofollow: '0'
+  _yoast_wpseo_meta-robots-adv: none
+  _yoast_wpseo_sitemap-include: ! '-'
+  _yoast_wpseo_sitemap-prio: ! '-'
+  _yoast_wpseo_canonical: ''
+  _yoast_wpseo_redirect: ''
+---
+I'm going to try something new here; I'll blog about what I do at work. Writing for this blog takes a huge amount of time, and I don't really have enough to both code and write much. At least not in my spare time, so blogging about what I did at work seems like a good solution.
+
+Over the last weeks I've been working on getting my company's main website (<a title="Groupe ESC Troyes" href="http://get-formation.fr/">get-formation.fr</a>) responsive. The site was launched less than  a year ago; responsive web design was already a hot topic at that time, but we didn't go for it right away. It's a very big websites, with over 300 pages and quite a lot of different layouts. There were already plenty of technical challenges to tackle without adding responsive design to it. Furthermore, we were on a rather tight schedule, so we decided mobile was not a high priority at that point.
+
+Things changed a bit later this year. One of our main targets are students, and students use smartphones - a lot. And with more time at hand, we thought it was time to finally go mobile. 
+
+In this first part, I'll write a bit about the decisions we had to make, how we prepared the site for becoming responsive, and how everything should have worked perfectly well; I'll do a second article soon where I detail how things actually went in practice (spoiler : not that good).
+
+<h1>Responsive website, separate website, app ..?</h1>
+
+The first choice I had to make was whether we'd go with a responsive website, redirect people to a separate mobile website, or create an app... Ok no, the app wasn't really an option. Writing a complete app both for iOS and Android would have taken way too much time; both in learning new skills and the crafting itself.
+
+I guess neither responsive design nor mobile website are perfect. With responsive design, I made assumptions that small screens where touch enabled - and when I borrowed a colleagues phone that had a browser but had no touch screen, the UX was horrible. RWD also inevitably leads to more css and unused HTML parts.
+
+But I very seriously hate the idea of relying on the User Agent string to decide whether or not to show a mobile website. user agents can <em>and are</em> changed by browsers, and you need an ever up-to-date database to make sure your back is covered.
+
+So I suggested we go with responsive design; drawbacks are pretty much a tie game imho, but at least we could also optimize for tablets, in a different way than mobiles. And, well, let's face it : I <b>wanted</a> to try responsive design on a large scale. I had done it before on smaller websites, and finally felt confident enough to apply the same principles on a big website.
+
+<h1>Stepping off the safe path</h1>
+
+One of the things we did on our desktop website is provide a very safe path to the content the user is looking for. This means several level of nesting, with - as much as possible - a reduced number of choices on each level. The 3 click rule is a myth, nobody should care about it.
+
+On mobile however, it's a whole different story : With limited broadband, every extra page you need to load has a huge impact. So we decided to make the users skip the whole layers in between. The basic idea was to turn the homepage into a big navigation menu with direct access to the "product" level pages.
+
+We also decided to leave out the common header that we have on every page on the desktop. On larger screens, it creates a strong branding while allowing the user to easily navigate back to higher levels. Leaving this header out on small screens allows the user to get straight to the core content.
+
+<h1>Preparing for a shitload of extra css</h1>
+
+Before even starting the redesign, I decided it would be wise to make the soon-to-be-old CSS more maintainable. It wasn't <em>that</em> bad, but I did have a bit of code repetition, there was unused CSS here and there... I also had some CSS3 properties that were sometimes prefixed, sometimes un-prefixed. And I knew i'd soon be writing a lot of media queries.
+
+Plus, I had started using CSS preprocessors on other projects, and once you start using them it really is a pain to get back to plain old CSS. I had been using LESS for a while, combined with the Twitter Bootstrap. The Twitter Bootstrap was no go here, since i didn't need the whole framework at all.
+
+But I also wanted to try SASS. I had been hearing lots of good things about it, the Compass extension looked not only super useful, and came with the promise of not generating too much extra-css (unlike Twitter Bootstrap).
+
+So I went with SASS, and it's great, i like it a lot more than LESS. Even though i'm used to the command line, I wasn't that keen on having to run commands to set up projects and start monitoring changes. I looked for GUI apps. With LESS, I used Winless which is excellent. I gave Scout App a try and it wasn't great, project configuration was a pain and the interface is really slow.
+
+I gave the command line a try, and it turned out easy enough to use. Inside my folder containing the scss files, I have a simple bat file containing this :
+
+<pre>
+compass watch
+</pre>
+
+And sitting right next to it, I have a simple config.rb file :
+
+<pre>
+config.rb
+</pre>
+
+I just run the bat file when I start working in the morning, and then forget about it.
+
+<h1>Grids &amp; stacking</h1>
+
+One of the core principles of RWD, we're told, is : take all of your blocks, and stack'em instead of having them side by side. 
+
+I used the 960 grid system to build the first version of get-formation.fr, so this, i figured, wouldn't be a problem. I wasn't making a heavy use of grids anyway, and there are no particularly complex layouts on the websites, so this shouldn't be an issue.
+
+The only thing I decided to do was to actually change the grid system; 960.gs is not responsive and generates quite a bit of CSS, most of it unused. But changing from one grid system to another must be easy.
+
+<h1>The complex navigation problem</h1>
+
+The real problem to us was the navigation at the lower levels. On large screens, we have a double navigation; one on top of every page with the websites main menu, and another, horizontal menu that is specific to the product you are currently viewing. As I said, we decided to hide the header with the main menu, but the side menu had to fit somewhere. And not as a side menu, that would take up way to much space.
+
+I searched for navigation patterns on mobile, and quickly found Brad Frost's great posts which cover pretty much all of them. Our menus are of the gigantic flavor; On average, we have 20-30 links to display. One of the patterns quickly drew my attention, because i had noticed it before : the flyout menu, sometimes called off-canavs menu. The idea is to hide the menu completely, and when the user presses the menu button, it flys out from the left and covers the page. This allows to efficiently display very big menus, while hiding it completely when it's not useful.
+
+Even though it's not yet widely used on websites, I think it's already familiar to most smartphone users; facebook uses it for their apps, Spotify as well, and probably more. Just to be sure, we decided to label the button with "Menu".
+
+Above this menu, we added a search box, something that is starting to be part of this pattern. We also included a back-to-the-homepage button. This means that if you realize you're on the wrong product, you have to go back all the way to the homepage - not the best scenario ever, but acceptable.
+
+<h1>And then I started</h1>
+
+Stay tuned for part 2 - digging into the actual work.

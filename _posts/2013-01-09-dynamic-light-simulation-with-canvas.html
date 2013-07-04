@@ -1,0 +1,52 @@
+---
+layout: post
+title: Dynamic light simulation with canvas
+tags:
+- canvas
+- html5
+- HTML5 lab
+- javascript
+- light
+- raycasting
+status: publish
+type: post
+published: true
+meta:
+  _yoast_wpseo_linkdex: '48'
+  _edit_last: '1'
+  _yoast_wpseo_focuskw: lighting simulation inside a canvas
+  _yoast_wpseo_title: Dynamic light simulation with canvas - Yannick Lohse
+  _yoast_wpseo_metadesc: An HTML5 experiment where beams of light are dynamically
+    casted inside a room and stop when they meet a wall thanks to raycasting techniques.
+  _yoast_wpseo_meta-robots-noindex: '0'
+  _yoast_wpseo_meta-robots-nofollow: '0'
+  _yoast_wpseo_meta-robots-adv: none
+  _yoast_wpseo_sitemap-include: ! '-'
+  _yoast_wpseo_sitemap-prio: ! '-'
+  _yoast_wpseo_canonical: ''
+  _yoast_wpseo_redirect: ''
+  _thumbnail_id: '619'
+---
+<h1>Without further introduction...</h1>
+
+<p>
+Click anywhere to start - move with the arrow keys.
+</p>
+
+<iframe src="http://code.yannick-lohse.fr/raycasting/integrated.html" width="482" height="362"></iframe>
+
+<h1>How it works</h1>
+
+<p>
+<a href="http://yannick-lohse.fr/wp-content/uploads/2013/01/beqs.jpg"><img src="http://yannick-lohse.fr/wp-content/uploads/2013/01/beqs.jpg" alt="beams of light" width="226" height="226" class="alignright size-full wp-image-619" /></a>Credits mostly go to <a href="http://www.emanueleferonato.com/">Emanuel Feronato</a> who wrote <a href="http://www.emanueleferonato.com/2007/09/26/create-a-survival-horror-game-in-flash-tutorial-part-1/">this very nice tutorial</a>. Basically I just ported it to javascript. There is a <a href="https://gist.github.com/4462395">gist here</a> with all the code.
+</p>
+
+<p>
+No need for much explanation here. The light bulb in the center projects beams of light that stop as soon as they hit a wall. I mostly built this because a) I wanted to test masking inside the canvas and b) it's cool. Cannon makes things easy again, the lighted area is a <a href="https://github.com/y-lohse/Cannon/wiki/Cannon.Display.Shape">simple shape</a>, and the masking is handled by <a href="https://github.com/y-lohse/Cannon/wiki/Cannon.DisplayObject#wiki-addMask">adding a mask</a> to the background object.
+</p>
+
+<p>
+As always, a picture is worth a thousand words so here is the same thing, but you can tweak some parameters around and enable/disable masking.
+</p>
+
+<iframe src="http://code.yannick-lohse.fr/raycasting/raycasting.html" width="582" height="562"></iframe>

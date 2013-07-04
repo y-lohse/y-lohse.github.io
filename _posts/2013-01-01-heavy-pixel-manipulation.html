@@ -1,0 +1,90 @@
+---
+layout: post
+title: How to (not) manipulate tons of pixels
+tags:
+- HTML5 lab
+status: draft
+type: post
+published: false
+meta:
+  _edit_last: '1'
+  _su_rich_snippet_type: none
+  _yoast_wpseo_linkdex: '0'
+  _yoast_wpseo_focuskw: ''
+  _yoast_wpseo_title: ''
+  _yoast_wpseo_metadesc: ''
+  _yoast_wpseo_meta-robots-noindex: '0'
+  _yoast_wpseo_meta-robots-nofollow: '0'
+  _yoast_wpseo_meta-robots-adv: none
+  _yoast_wpseo_sitemap-include: ! '-'
+  _yoast_wpseo_sitemap-prio: ! '-'
+  _yoast_wpseo_canonical: ''
+  _yoast_wpseo_redirect: ''
+---
+<h2>Disclaimers</h2>
+Before I start, let's clarify a couple of things.
+
+First off, this is going to get quite technical - it's assumed you know javascript, and you have at least some knowledge of how the html5 canvas works. Also, it's not pure bitching; I'll cover a couple of solutions I tried - turns out none of them worked well enough, hence the title. It could also be called <em>"Why typed arrays are no good -a case study"</em>
+
+Second, typed arrays are a great idea, they need to stay. But they also need to fulfill their promises, and that's not the case as of today.
+<h2>The problem</h2>
+The HTML5 canvas is great, you can do so many things in it... we're still in the process of figuring out the boundaries of this. A couple of months ago (ok, years), I mentioned <a href="http://yannick-lohse.fr/2010/06/map-displacement-filter-1/">applying filters on canvas</a>, and how it would probably get a bigger thing in the upcoming years. <a href="http://neave.com/webcam/html5/">Turns out I was right</a>. But my implementations at the time were tailor-made for the experiments, and now I've been trying to turn them into something I could incorporate in my Cannon framework.
+
+So what I'm actually trying to achieve here is load the pixels of an image, manipulate them, and draw the result onto a canvas. And this as fast as possible, because it needs to happen inside a rendering loop. We're talking animation here, so we need at the very least 24 frames per second so taht the human eye think the changes are fluid. But actually 24 fps sucks - you see a clear difference between a 24 fps animation and a 30 fps animation. Ideally, you would run an animation at 60 fps, above it, you don't really notice a difference. But lets keep it easy, we'll aim for a 30 fps animation.
+
+Maximum milliseconds per frame = 1000 (1 second) / 30 = 33.3 ms
+
+Screw the .3 ms - we have 33 ms at hand to do all of our stuff. Keep that in mind, it will show you just how much we fail here.
+<h2>Where things go wrong</h2>
+You can't directly access pixels of an image - you first have to draw it inside a canvas. That's already taking up Xms, but all right.
+
+Next thing, you load the pixels. What you get is a fucking huge array. For every pixel in your image, you get the red, green, blue, and alpha value. All inside the very same, one dimensional array. So for a 300*400 pixel image, you get 300*400*4 = 480 000 entries in your array. Just to be clear, that's the heck of a large array. Now getting the array is actually fast enough, the loading takes Xms.
+
+The real problem comes when you try to manipulate it. For a basic filter, say brightness, you have to modify the value of every pixel.
+
+What you actually get is not a regular 480 000 entries array. You get a new type of arrays, called typed arrays. While their use is quite the same as a regular array, they work a bit differently. You start by creating a buffer, which is going to hold the actual data - and then you create a reader, which will be able to access the data. The important part is that you predefine how many bytes you want in your buffer, and what data type you want your reader to return. You can access the same buffer with different readers, but that is irrelevant to our scenario.
+
+Available reader types include signed and unsigned Int32, Int16 and Int8. But before reading data, you need to know what size your array is going to be. This is done by the following formula :
+
+B = E * T / 8
+
+Where B is the number of bytes your buffer needs to hold, E the number of entries you want, and T the data type you cant. 8 is the number of bits in a byte. So if you want your array to hold 10 Int32 numbers, you need
+
+B = 10 * 32 / 8 = 40
+
+40 bytes. In our case, things are so much simpler, because any of the red/green/blue/alpha values is between 0 and 255, so a Int8 is big enough This gives us
+
+B = E * 8 / 8 = E * 1 = E
+
+Easy enough. So why would you go through the trouble of using a buffer, a reader, pre calculating the size of your array <em>(oh wait, you have to always do that in other languages)</em> ? Well, the only logical reason is performance. With a fixed sized array that can only hold typed numbers, you'd excpect the engine to be much faster.
+
+But it isn't. That's the whole problem here, regular arrays are just as fast as typed ones. kanaka lead extensive tests on this matter <a href="http://blog.n01se.net/blog-n01se-net-p-248.html">here</a> - I ran a couple of tests myself, but they aren't very well organized  my results however are the same, and he ran his tests <em>a year</em> ago.
+<h2>Solutions</h2>
+tl;dr : I don't have a solution. I tried a couple of different things, I'll explain them here - but none of them is good enough.
+<h3>Usual optimisations</h3>
+I first tried to make things better without modifying my code too much, with a couple of tricks that actually provide decent results.
+
+- loop inverses- objets dans le local scope
+- boucles while
+<h3>Reducing the array</h3>
+Since this wasn't enough, I tried to aim at the root of the problem, ie. accessing a very large array repitedly. SO I cut the array inti smaller chunks, and stored them... well, inside another array. Now it's just a slightly smaller, but multidimensional array.
+
+Turns out this does'bt wirk any better.
+<h3>Using webworkers</h3>
+Webworkers seem like the perfect usecase, or at least they have been described as such. When researching the subject, most examples would show how to calculate some fibonacci numbers, and end with "could be used to process large images".
+
+Well, maybe I did it wrong, but it didn't turn out that good here. Ok, you get way better performances with a webworker; you have to make your code asynchronous.
+
+But you can't parralyze all that much. Actually it's very easy, each webworker uses a core, so if you have a quad core processor, you can run 4 webworkers at the smae time.It does make sense, but it's not that practical at all. One webworker here is clearly not enough, so spawning a swarm of workers seemed like a good idea.
+
+Sans worker, sans draw : entre 330 et 400
+Sans worker, sans draw, mais tout inclus dans lafonction : entre 180 et 220
+Aver worker : entre 11 et 100
+
+Blur
+sans rien, draw compris: entre 110 et 800
+avecworker : entre 70 et 140
+<h3>Do it differently</h3>
+Other people actually manage to apply such kind of filters in real time. I took a quick look at how they do it, and apparently they use some kind of WebGL extension called Shader something. I don't know it and it's not really a must have to me right now, but if you're interested in filtering images with a canvas, it's probably the way to go.
+
+&nbsp;
