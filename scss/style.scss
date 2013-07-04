@@ -33,35 +33,43 @@ p{
 	}
 }
 
-//homepage
-.home .main-title{
-	@extend .alpha;
-	margin: 30px auto 13px;
-	font-family: "Museo Sans 100";
-	@include hyphens(none);
-}
-.home .main-subtitle{
-	@extend .delta;
-	color: $font-color;
-}
-.home .cloak{
+//default
+.main .cloak{
 	color: $cloak-color;
 }
-.home .stress{
+.main .stress{
 	color: $stress-color;
 	font-weight: normal;
 }
-.home .subtitle{
+.main .title{
+	@extend .gamma;
+	color: $stress-color;
+	margin-top: 20px;
+	margin-bottom: 45px;
+}
+.main .subtitle{
 	@extend .delta;
 	color: $stress-color;
 	text-align: center;
 	margin-top: 75px;
 	margin-bottom: 30px;
 }
-.home .linklist{
+
+//homepage stuff
+.main .home-title{
+	@extend .alpha;
+	margin: 30px auto 13px;
+	font-family: "Museo Sans 100";
+	@include hyphens(none);
+}
+.main .home-subtitle{
+	@extend .delta;
+	color: $font-color;
+}
+.main .linklist{
 	list-style: none;
 }
-.home .linklist a{
+.main .linklist a{
 	display: block;
 	padding: 10px 16px;
 	margin-bottom: 16px;
