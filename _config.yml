@@ -1,1 +1,1 @@
-exclude: ['scss']
+exclude: ['scss', 'serve.bat']

@@ -20,6 +20,10 @@ hr{
 
 p{
 	margin-bottom: 18px;
+	font-family: 'Museo 300';
+}
+p a{
+	color: $stress-color;
 }
 
 .container{
@@ -56,13 +60,13 @@ p{
 }
 
 //homepage stuff
-.main .home-title{
+.main .home-headline{
 	@extend .alpha;
 	margin: 30px auto 13px;
 	font-family: "Museo Sans 100";
 	@include hyphens(none);
 }
-.main .home-subtitle{
+.main .home-subheadline{
 	@extend .delta;
 	color: $font-color;
 }
@@ -73,9 +77,10 @@ p{
 	display: block;
 	padding: 10px 16px;
 	margin-bottom: 16px;
-	color: $font-color;
 	background: darken($background-color, 5);
 	border-radius: 8px;
+	font-family: $heading-font;
+	color: $font-color;
 	text-decoration: none;
 	@include transition(background .4s ease, color .4s ease);
 	
@@ -86,5 +91,49 @@ p{
 	
 	&:before{
 		margin-right: 6px;
+	}
+}
+
+//post list
+.post-list{
+	list-style: none;
+}
+.post{
+	margin: 20px 0 110px;
+}
+.post .post-title{
+	@extend .delta;
+	margin-bottom: 0;
+}
+.post .post-title-link{
+	color: $font-color;
+	text-decoration: none;
+}
+.post .post-date{
+	font-size: .9rem;
+	display: block;
+	color: $cloak-color;
+}
+.post .post-excerpt{
+	margin-top: 15px;
+}
+.post .post-link{
+	display: block;
+	padding: 10px 16px;
+	margin-top: 26px;
+	background: darken($background-color, 5);
+	border-radius: 8px;
+	font-family: $heading-font;
+	color: $font-color;
+	text-decoration: none;
+	@include transition(background .4s ease, color .4s ease);
+	
+	&:hover{
+		background: darken($background-color, 8);
+		color: $stress-color;
+	}
+	
+	&:after{
+		content: "→";
 	}
 }
