@@ -16,7 +16,7 @@ status: publish
 type: post
 published: true
 ---
-I've finally done it - I documented my [Cannon framework](https://github.com/y-lohse/Cannon "Object oriented js framework"). For those unfamiliar with it, it's the js libraby I build and use in most of my demos. It makes drawing 2D stuff into a canvas a breeze - and handles a lot of other things.The documentation is inside the [GitHub wiki](https://github.com/y-lohse/Cannon/wiki). There are still a few things missing, but I'm working on it.
+I've finally done it — I documented my [Cannon framework](https://github.com/y-lohse/Cannon "Object oriented js framework"). For those unfamiliar with it, it's the js libraby I build and use in most of my demos. It makes drawing 2D stuff into a canvas a breeze — and handles a lot of other things.The documentation is inside the [GitHub wiki](https://github.com/y-lohse/Cannon/wiki). There are still a few things missing, but I'm working on it.
 
 I wrote a little [quick start guide](https://github.com/y-lohse/Cannon/wiki/Getting-started), but a couple of days ago I also wrote a simple pool game simulation to test a collision detection mechanism. So in this post, I'll show you how you can use Cannon to do the same.
 
@@ -73,7 +73,7 @@ You should now have a green background to your canvas. Time to get serious.
 
 ## Creating a custom object
 
-Ok, there are no classes in javascript - but Cannon objects are pretty much as close as it gets. We're going to capitalize on that and create our own objects.
+Ok, there are no classes in javascript — but Cannon objects are pretty much as close as it gets. We're going to capitalize on that and create our own objects.
 The first thing we'll need is balls. Since we're going to keep things simple, balls will simply be represented by a circle. We could use the [Circle object](https://github.com/y-lohse/Cannon/wiki/Cannon.Display.Circle), but our balls will also need to move and collide with each other. We'll start by adding just the movement part.
 
 Movements are easy to represent codewise: they are just vectors. If the cue balls vector is 1;-1, then at each frame we just add 1 to it's x position and substract 1 to it's y position. Here's out Ball object :
@@ -111,7 +111,7 @@ Let's add our cue ball right away :
     	cue.direction.x = 1;
     };
 
-Since we're going to use the cue ball in other places, it goes into the global scope. Right now you should see the cue ball sitting in the middle of the satge, not moving. We *did* set the x direction to 1, but we're not telling the ball to move yet. We'll add this now. This is part of the routines that will have to be run on every frame - we're going to set this up with the [canvas:render](https://github.com/y-lohse/Cannon/wiki/Cannon.Canvas#wiki-canvasrender) event.
+Since we're going to use the cue ball in other places, it goes into the global scope. Right now you should see the cue ball sitting in the middle of the satge, not moving. We *did* set the x direction to 1, but we're not telling the ball to move yet. We'll add this now. This is part of the routines that will have to be run on every frame — we're going to set this up with the [canvas:render](https://github.com/y-lohse/Cannon/wiki/Cannon.Canvas#wiki-canvasrender) event.
 
     Cannon.onReady = function(){
     	Cannon.use('*');
@@ -143,7 +143,7 @@ Now you should seethe cue ball moving away like in the example below (click anyw
 ## Adding interactivity
 
 [![pool](http://yannick-lohse.fr/wp-content/uploads/2013/01/pool.jpg)](http://yannick-lohse.fr/wp-content/uploads/2013/01/pool.jpg)
-Before we start handling collisions and shit, let's add the single piece of interactivity there will be. We want a shooting mechanism, and we want it easy. The pointer of the mouse shall represent the tip of the cue - when the user clicks the cue ball, he start a shot, he then moves his mouse away from the cue ball as he would move the cue away. When he releases the mouse, the shot fires, proportionally to the distance he moved.
+Before we start handling collisions and shit, let's add the single piece of interactivity there will be. We want a shooting mechanism, and we want it easy. The pointer of the mouse shall represent the tip of the cue — when the user clicks the cue ball, he start a shot, he then moves his mouse away from the cue ball as he would move the cue away. When he releases the mouse, the shot fires, proportionally to the distance he moved.
 
 That may sound a bit complex, but it really isn't. We just need to watch for a mousedown followed by a mouseup event, and calculate the difference between both.
 
@@ -176,12 +176,12 @@ When setting the new direction of the ball, we could have just done:
 
 But we solved 2 other problems right away, both related to the speed of the ball. Since we're running the animation at 60 frames per second, we're updating the balls position 60 times a second. This means that a velocity of say x:5;y:0 is already huge. At that speed, the ball would cross the whole play area in a single second. And when the player drags the mouse, he'll often move way more than 5 pixels, resulting in always-high-speeds.
 
-So we made sure the velocity of the ball can never exceed 10 pixels par render, no matter what direction, and we also divided the mouse position difference by 5 - not very clean, but it makes things far easier for the player to control.
+So we made sure the velocity of the ball can never exceed 10 pixels par render, no matter what direction, and we also divided the mouse position difference by 5 — not very clean, but it makes things far easier for the player to control.
 
 ## Let's build a rail
 
 Ok, time to mix in some boundaries. We'll add some rails on the sides of the stage, so the ball can bounce off against them.
-Again, rails are just rectangles - and we have a [rectangle object standing by](https://github.com/y-lohse/Cannon/wiki/Cannon.Display.Rectangle). We'll apply the same process as with the ball to create a generic rail object.
+Again, rails are just rectangles — and we have a [rectangle object standing by](https://github.com/y-lohse/Cannon/wiki/Cannon.Display.Rectangle). We'll apply the same process as with the ball to create a generic rail object.
 
     Rail = Cannon.Display.Rectangle.extend({
     	__construct: function(x, y, width, height){
@@ -213,11 +213,11 @@ And we'll add a rail right away
 ## Collision detection : Ball vs Rail
 
 
-We are now going to start handling collisions between objects - that's quite a bit more complicated than adding and moving objects in the scene.
+We are now going to start handling collisions between objects — that's quite a bit more complicated than adding and moving objects in the scene.
 
 Cannon can detect collisions for you thanks to the built-in Separate Axis Test (SAT). If you want to know more about how SAT works, I mostly used [this nettuts tutorial](http://gamedev.tutsplus.com/tutorials/implementation/collision-detection-with-the-separating-axis-theorem/) and a bit of [this one](http://www.metanetsoftware.com/technique/tutorialA.html).
 
-The collision response is not built in, so we'll need to write it - but it's just math. A bit of trigonometry and lots of vectors.
+The collision response is not built in, so we'll need to write it — but it's just math. A bit of trigonometry and lots of vectors.
 
 ### Bounding boxes and circles
 
@@ -255,7 +255,7 @@ If we want to use the Cannon SAT package, everything that needs to be checked fo
 
 ### Checking for collision
 
-*That* is the easy part - Cannon does it for you.
+*That* is the easy part — Cannon does it for you.
 
     function onRender(){
     	cue.updateBounding();
@@ -446,7 +446,7 @@ And the collision part :
 
 <iframe src="http://code.yannick-lohse.fr/pool/pool.php?v=9" width="510" height="310"></iframe>
 
-Note that at this point, the cue vs rail collisions behaves odly - that's because we moved the call to updateBounding(). We'll fix that soon.
+Note that at this point, the cue vs rail collisions behaves oddly — that's because we moved the call to updateBounding(). We'll fix that soon.
 
 ### Collision response
 
@@ -595,9 +595,9 @@ Now we add the ball vs pocket collision, just after our ball vs ball loop.
 		ball1.y += ball1.direction.y;
 	}
 
-### Collision resp... oh, wait
+### Collision resp… oh, wait
 
-What we want to do here is remove the ball that was just sinked - except if it's the cue ball, then we'll reset it. The only thing to consider is we're looping through the balls array - if we remove one in the middle of the loop, things will start to break apart. Instead, we'll keep track of the sinked balls and remove them once we're done with the loop. 
+What we want to do here is remove the ball that was just sinked — except if it's the cue ball, then we'll reset it. The only thing to consider is we're looping through the balls array — if we remove one in the middle of the loop, things will start to break apart. Instead, we'll keep track of the sinked balls and remove them once we're done with the loop. 
 
 	var removeMe = [];
 	for (var i = 0; i < balls.length; i++){

@@ -16,7 +16,7 @@ published: true
 ---
 [Here's something I created within one afternoon without any aim nor reason.](http://code.yannick-lohse.fr/connections/connections.php?n=15 "Connections") I just wanted a couple of dots that would connect to each others.
 
-The resulting polygones are very natural : the only things the dot do is :
+The resulting polygones are very natural, the only things the dot do is:
 
 - when not too far away from another, get together
 - when too close to each other, get appart

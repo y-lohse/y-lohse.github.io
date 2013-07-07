@@ -39,7 +39,7 @@ Now each word is taken individually and hashed using the md5 algorithm, which ou
 
 Next I'm doing a recursive addition of this value, until it's only one digit long.
 
-    705610ed3e5ec724f5cb0d76a5fd3aa1 = 7+0+5+6+...+a+1 =... = 3
+    705610ed3e5ec724f5cb0d76a5fd3aa1 = 7+0+5+6+...+a+1 = ... = 3
 
 Since it's an hexadecimal value, this algorithm comes up with one of 16 values, between 0 and f. And Oh Look!, there are 16 possible sounds that can be played.
 
@@ -49,4 +49,4 @@ That's basically it. No random, which means a tweet will always sound the same. 
 
 This may, or may not be my fault. I'm using the Twitter API to retrieve the tweets, and cache them for half an hour, which means you have to wait a bit before new tweets show up. But Twitter does some caching as well, so this might be a reason too. And if the app isn't finding any of your tweets, they are probably too old to be found by the API.
 
-But hey, to solve this, you can just tweet something new like... wait...  about symphotweet?
+But hey, to solve this, you can just tweet something new like… wait…  about symphotweet?

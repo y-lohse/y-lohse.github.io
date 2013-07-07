@@ -12,9 +12,9 @@ status: publish
 type: post
 published: true
 ---
-## Without further introduction...
+## Without further introduction…
 
-Click anywhere to start - move with the arrow keys.
+Click anywhere to start — move with the arrow keys.
 
 <iframe src="http://code.yannick-lohse.fr/raycasting/integrated.html" width="482" height="362"></iframe>
 
