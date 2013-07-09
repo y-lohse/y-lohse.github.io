@@ -1,6 +1,7 @@
 ---
 layout: post
 title: HTML5 fractals - Buddhabrot
+description: Generating buddhabrot fractals with javascript.
 tags:
 - HTML5 lab
 - Other

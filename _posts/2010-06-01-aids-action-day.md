@@ -1,6 +1,7 @@
 ---
 layout: post
 title: AIDS action day
+description: A simple game for a good cause.
 tags:
 - Flash
 status: publish

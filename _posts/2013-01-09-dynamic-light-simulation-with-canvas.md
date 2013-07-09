@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Dynamic light simulation with canvas
+description: Simulating dynamic lighting in 2D with canvas.
 tags:
 - canvas
 - html5

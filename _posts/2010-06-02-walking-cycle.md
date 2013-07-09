@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Walking Cycle
+description: A shadow walking cycle animation
 tags:
 - Other
 status: publish

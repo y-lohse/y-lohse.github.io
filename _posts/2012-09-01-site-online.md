@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Site back online
+description: I was away, but you probably didn't ntocie anyway :).
 tags:
 - Other
 status: publish

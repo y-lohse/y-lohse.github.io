@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Connections
+description: Interactive experiment, devoid of sense or purpose.
 tags:
 - canvas
 - connections

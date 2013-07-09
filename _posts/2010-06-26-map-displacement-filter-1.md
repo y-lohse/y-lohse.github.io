@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ! 'Map Displacement Filter #1'
+description: Map displacement filters with the HTML5 canvas, an introduction.
 tags:
 - bubble
 - canvas

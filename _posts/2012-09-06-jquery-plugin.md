@@ -1,6 +1,7 @@
 ---
 layout: post
 title: My first jquery plugin
+description: A not-so-usefull jquery plugin I wrote.
 tags:
 - earth
 - elements

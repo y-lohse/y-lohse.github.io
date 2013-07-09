@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Aborted design
+description: A quick presentation of a design concept for my personal website that ended up in the bin.
 tags:
 - concept
 - design

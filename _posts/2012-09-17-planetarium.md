@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Planetarium
+description: A gravity simulator with canvas and some thoughts on tools for creating such things.
 tags:
 - asteroids
 - attraction

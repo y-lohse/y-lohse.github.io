@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ! 'Map Displacement Filter #2'
+description: Offer the Mona Lisa a little lifting with map displacement filters.
 tags:
 - canvas
 - filter

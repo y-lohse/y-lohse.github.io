@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Building a simple pool game with the HTML5 canvas
+description: Step by step tutorial on building a pool gave with canvas and my Cannon framework.
 tags:
 - billiard
 - cannon

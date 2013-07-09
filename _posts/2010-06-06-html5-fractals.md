@@ -1,6 +1,7 @@
 ---
 layout: post
 title: HTML5 Fractals
+description: Generating fractals with javascript.
 tags:
 - HTML5 lab
 status: publish

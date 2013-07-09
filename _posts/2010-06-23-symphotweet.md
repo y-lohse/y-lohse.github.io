@@ -1,6 +1,7 @@
 ---
 layout: post
 title: SymphoTweet
+description: A (now broken) experiment generating music from tweets.
 tags:
 - HTML5 lab
 status: publish

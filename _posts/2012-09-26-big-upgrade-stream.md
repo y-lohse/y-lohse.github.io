@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Big upgrade for Look At Stream
+description: Read about the thining behind some recent changes to our Look At Stream service.
 tags:
 - design
 - Look AT stream

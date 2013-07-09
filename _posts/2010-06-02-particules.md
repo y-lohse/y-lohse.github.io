@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Particles
+description: Particles following your mouse around.
 tags:
 - Flash
 status: publish
