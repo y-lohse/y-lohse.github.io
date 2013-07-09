@@ -138,7 +138,7 @@ Since we're going to use the cue ball in other places, it goes into the global s
 
 Now you should seethe cue ball moving away like in the example below (click anywhere to start).
 
-<iframe src="http://code.yannick-lohse.fr/pool/pool.php?v=3" width="510" height="310"></iframe>
+<iframe src="http://code.yannick-lohse.fr/pool/pool.php?v=3" width="510" height="310"> </iframe>
 
 ## Adding interactivity
 
@@ -168,7 +168,7 @@ That may sound a bit complex, but it really isn't. We just need to watch for a m
     	});
     };
 
-<iframe src="http://code.yannick-lohse.fr/pool/pool.php?v=4" width="510" height="310"></iframe>
+<iframe src="http://code.yannick-lohse.fr/pool/pool.php?v=4" width="510" height="310"> </iframe>
 
 When setting the new direction of the ball, we could have just done:
 
@@ -208,7 +208,7 @@ And we'll add a rail right away
     	//do more stuff
     };
 
-<iframe src="http://code.yannick-lohse.fr/pool/pool.php?v=5" width="510" height="310"></iframe>
+<iframe src="http://code.yannick-lohse.fr/pool/pool.php?v=5" width="510" height="310"> </iframe>
 
 ## Collision detection : Ball vs Rail
 
@@ -273,7 +273,7 @@ If we want to use the Cannon SAT package, everything that needs to be checked fo
 We added a call to the newly defined updateBounding() function, and checked for a rail-ball collision. When one is detected, we stop the ball.
 You may also wonder why we suddenly multiply the direction vector by 0.97. This is to make the ball gradually slow down and corresponds to the friction of the ball with the table, making it loose momentum. The 0.97 value is arbitrary.
 
-<iframe src="http://code.yannick-lohse.fr/pool/pool.php?v=6" width="510" height="310"></iframe>
+<iframe src="http://code.yannick-lohse.fr/pool/pool.php?v=6" width="510" height="310"> </iframe>
 
 ### Collision response
 
@@ -304,7 +304,7 @@ The tricky part comes here, but again, it's just math. When the ball collides wi
 
 Hey look, it already works !
 
-<iframe src="http://code.yannick-lohse.fr/pool/pool.php?v=7" width="510" height="310"></iframe>
+<iframe src="http://code.yannick-lohse.fr/pool/pool.php?v=7" width="510" height="310"> </iframe>
 
 ## Scaling up
 
@@ -381,7 +381,7 @@ And the collision detection loop :
 		cue.y += cue.direction.y;
 	}
 
-<iframe src="http://code.yannick-lohse.fr/pool/pool.php?v=8" width="510" height="310"></iframe>
+<iframe src="http://code.yannick-lohse.fr/pool/pool.php?v=8" width="510" height="310"> </iframe>
 
 ## Ball vs Ball collision
 
@@ -444,7 +444,7 @@ And the collision part :
 		ball1.y += ball1.direction.y;
 	}
 
-<iframe src="http://code.yannick-lohse.fr/pool/pool.php?v=9" width="510" height="310"></iframe>
+<iframe src="http://code.yannick-lohse.fr/pool/pool.php?v=9" width="510" height="310"> </iframe>
 
 Note that at this point, the cue vs rail collisions behaves oddly — that's because we moved the call to updateBounding(). We'll fix that soon.
 
@@ -474,7 +474,7 @@ Again, math. For the ball vs ball response, we'll use [elastic collisions](http:
 
 Well, that's all there is to it.
 
-<iframe src="http://code.yannick-lohse.fr/pool/pool.php?v=10" width="510" height="310"></iframe>
+<iframe src="http://code.yannick-lohse.fr/pool/pool.php?v=10" width="510" height="310"> </iframe>
 
 ## More scalling
 
@@ -516,7 +516,7 @@ Now that all this works fine, we need to fix the bug we introduced by moving the
 
 Again, no need for more. At this point, we're almost done.
 
-<iframe src="http://code.yannick-lohse.fr/pool/pool.php?v=11" width="510" height="310"></iframe>
+<iframe src="http://code.yannick-lohse.fr/pool/pool.php?v=11" width="510" height="310"> </iframe>
 
 ## Adding pockets
 
@@ -655,6 +655,6 @@ What we want to do here is remove the ball that was just sinked — except if it
 
 # We're done!
 
-<iframe src="http://code.yannick-lohse.fr/pool/pool.php?v=12" width="510" height="310"></iframe>
+<iframe src="http://code.yannick-lohse.fr/pool/pool.php?v=12" width="510" height="310"> </iframe>
 
 That's it, our pool works. [In the final gist](https://gist.github.com/4439108), I added 9 more balls and placed them randomly. There are more things that could be done, like adding effects (way more math and physics) or a scoring system (way more code), but we kept it simple here. You can play [a standalone version here](http://code.yannick-lohse.fr/pool/pool.php?v=12).

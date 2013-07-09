@@ -16,7 +16,7 @@ published: true
 
 Click anywhere to start — move with the arrow keys.
 
-<iframe src="http://code.yannick-lohse.fr/raycasting/integrated.html" width="482" height="362"></iframe>
+<iframe src="http://code.yannick-lohse.fr/raycasting/integrated.html" width="482" height="362"> </iframe>
 
 ## How it works
 
@@ -27,4 +27,4 @@ No need for much explanation here. The light bulb in the center projects beams o
 
 As always, a picture is worth a thousand words so here is the same thing, but you can tweak some parameters around and enable/disable masking.
 
-<iframe src="http://code.yannick-lohse.fr/raycasting/raycasting.html" width="582" height="562"></iframe>
+<iframe src="http://code.yannick-lohse.fr/raycasting/raycasting.html" width="582" height="562"> </iframe>

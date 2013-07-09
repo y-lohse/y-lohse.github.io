@@ -20,7 +20,7 @@ A couple of month ago, I built an asteroid field simulator with my friend [Matth
 
 [Here is the simulator](http://code.yannick-lohse.fr/planetarium/planetarium.html "Planetarium simulator"); you can click to add a new asteroid — the longer you keep the mouse button down, the bigger the new asteroid gets. When you release the button, your new planet will start interacting with the others. You can also give it a speed and direction by releasing the mouse in a different location from where you started the click.
 
-<iframe src="http://code.yannick-lohse.fr/planetarium/planetarium.html" width="710" height="700"></iframe>
+<iframe src="http://code.yannick-lohse.fr/planetarium/planetarium.html" width="710" height="700"> </iframe>
 
 ## Behind the scenes
 
@@ -28,7 +28,7 @@ I'm still working on new demos, but none of them are actually ready yet, so I ke
 
 But when I was done, I had another idea : why shouldn't I explain how things work behind the scenes — and the best way to explain it would be to show it, rather than explaining the maths. To me everything was clear (that's what I thought), but people may not *see* the attractions and orbits as I do for having coded it. So here is another version of the very same simulator, except it shows a lot more information.
 
-<iframe src="http://code.yannick-lohse.fr/planetarium/debugplanetarium.html" width="710" height="720"></iframe>
+<iframe src="http://code.yannick-lohse.fr/planetarium/debugplanetarium.html" width="710" height="720"> </iframe>
 
 The small black circles are just the same as on the original, the representation of asteroids. They have a red, semi transparent circle around them : this represents their field of attraction. Every other asteroid located within this field will be attracted to the source, the force of the attraction being based on the relative masses of the planets. The masses are in scale with the radiuses of the circles and you can see how quickly the attraction fields grows as the asteroid gains in mass.
 
@@ -45,7 +45,7 @@ Things quickly became **very** interesting — for me. Turns out I didn't actual
 
 This very problem of programmers not visualizing what they actually do is being studied and tackled by the brilliant mind of [Bret Victor](http://worrydream.com). I had watched this talk of him a couple of month ago, but while I couldn't refrain laughing of excitement when I saw it, it's the first time I actually *apply* the concept he speaks of to one of my own projects. It's awesome.
 
-<iframe src="http://player.vimeo.com/video/36579366?byline=0" frameborder="0" width="500" height="281"></iframe>
+<iframe src="http://player.vimeo.com/video/36579366?byline=0" frameborder="0" width="500" height="281"> </iframe>
 
 [Bret Victor — Inventing on Principle](http://vimeo.com/36579366) from [CUSEC](http://vimeo.com/cusec) on [Vimeo](http://vimeo.com).
 
