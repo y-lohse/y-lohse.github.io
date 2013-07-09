@@ -6,7 +6,7 @@ title: blog@yannick-lohse
 	Blog
 </h1>
 <ul class="post-list">
-	{% for post in site.posts %}
+	{% for post in paginator.posts %}
 	<li class="post">
 		<h2 class="post-title">
 			<a href="{{ post.url }}" class="post-title-link">
@@ -19,9 +19,6 @@ title: blog@yannick-lohse
 		<div class="post-excerpt">
 			{{ post.excerpt | strip_html }}
 		</div>
-		<a href="{{ post.url }}" class="post-link">
-			Read the whole thing
-		</a>
 	</li>
 	{% endfor %}
 </ul>
