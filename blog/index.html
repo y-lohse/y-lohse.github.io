@@ -1,6 +1,15 @@
 ---
 layout: default
 title: blog@yannick-lohse
+moreLabel:
+- Read the full mounty
+- More
+- Read it all
+- Full article
+- Read more
+- Full text
+- Go on
+- Tell me more
 ---
 <h1 class="title">
 	Blog
@@ -16,9 +25,30 @@ title: blog@yannick-lohse
 		<span class="post-date">
 			{{ post.date |  date: '%Y-%m-%d' }}
 		</span>
-		<div class="post-excerpt">
-			{{ post.excerpt | strip_html }}
+		<div class="post-description">
+			{{ post.description }}
+			<a href="{{ post.url }}" class="post-link">
+				{{ page.moreLabel | random }}
+			</a>
 		</div>
 	</li>
 	{% endfor %}
 </ul>
+
+<nav class="pagination">
+	{% if paginator.previous_page %}
+	<a href="/blog/{{ paginator.previous_page_path; }}" class="previous">
+		page {{ paginator.previous_page }}
+	</a>
+	{% endif %}
+	
+	<span class="page-counter">
+		{{ paginator.page }} / {{ paginator.total_pages }}
+	</span>
+	
+	{% if paginator.next_page %}
+	<a href="/blog/{{ paginator.next_page_path; }}" class="next">
+		page {{ paginator.next_page }}
+	</a>
+	{% endif %}
+</nav>

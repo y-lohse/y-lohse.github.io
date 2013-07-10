@@ -74,23 +74,47 @@ p a{
 	list-style: none;
 }
 .main .linklist a{
+	@extend %highlight-link;
 	display: block;
-	padding: 10px 16px;
 	margin-bottom: 16px;
-	background: darken($background-color, 5);
-	border-radius: 8px;
-	font-family: $heading-font;
-	color: $font-color;
-	text-decoration: none;
-	@include transition(background .4s ease, color .4s ease);
-	
-	&:hover{
-		background: darken($background-color, 8);
-		color: $stress-color;
-	}
+	padding: 10px 16px;
 	
 	&:before{
 		margin-right: 6px;
+	}
+}
+
+//blog pagination
+.pagination{
+	@extend .clearfix;
+	text-align: center;
+	margin-bottom: 40px;
+}
+.pagination .page-counter{
+	display: inline-block;
+	font-family: $heading-font;
+	padding: 10px 0;
+	color: $cloak-color;
+}
+.pagination a{
+	display: inline-block;
+	@extend %highlight-link;
+	padding: 6px 16px;
+}
+.pagination .previous{
+	float: left;
+	
+	&:before{
+		margin-right: 4px;
+		content: "\2190";
+	}
+}
+.pagination .next{
+	float: right;
+	
+	&:after{
+		margin-left: 4px;
+		content: "\2192";
 	}
 }
 
@@ -99,7 +123,9 @@ p a{
 	list-style: none;
 }
 .post{
-	margin: 20px 0 110px;
+	margin: 20px 0 50px;
+	padding: 25px 20px;
+	background: darken($background-color, 5);
 }
 .post .post-title{
 	@extend .delta;
@@ -114,26 +140,11 @@ p a{
 	display: block;
 	color: $cloak-color;
 }
-.post .post-excerpt{
-	margin-top: 15px;
+.post .post-description{
+	margin-top: 12px;
 }
 .post .post-link{
-	display: block;
-	padding: 10px 16px;
-	margin-top: 26px;
-	background: darken($background-color, 5);
-	border-radius: 8px;
-	font-family: $heading-font;
-	color: $font-color;
+	color: $stress-color;
 	text-decoration: none;
-	@include transition(background .4s ease, color .4s ease);
-	
-	&:hover{
-		background: darken($background-color, 8);
-		color: $stress-color;
-	}
-	
-	&:after{
-		content: "→";
-	}
+	border-bottom: 1px solid $stress-color;
 }

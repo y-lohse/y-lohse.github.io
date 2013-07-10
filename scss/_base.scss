@@ -23,6 +23,20 @@ $default-transition-duration: 0.2s;
 
 @include register-breakpoints($mobile, $tablet, $small-desktop, $large-desktop);
 
+%highlight-link{
+	background: darken($background-color, 5);
+	border-radius: 8px;
+	font-family: $heading-font;
+	color: $font-color;
+	text-decoration: none;
+	@include transition(background .4s ease, color .4s ease);
+	
+	&:hover{
+		background: darken($background-color, 8);
+		color: $stress-color;
+	}
+}
+
 
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
