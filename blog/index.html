@@ -23,7 +23,7 @@ moreLabel:
 			</a>
 		</h2>
 		<span class="post-date">
-			{{ post.date |  date: '%Y-%m-%d' }}
+			{{ post.date |  date_to_string }}
 		</span>
 		<div class="post-description">
 			{{ post.description }}

@@ -8,14 +8,24 @@ body{
 hr{
 	$size: 50px;
 	display: block;
-	width: $size;
-	height: $size;
 	margin: 40px auto;
-	background-image: url('/img/mobius.png');
-	background-color: #ededed;
-	@include background-size(contain);
 	border: none;
-	border-radius: 50%;
+	height: $size;
+	
+	@extend .icon-mobius;
+	
+	&:before{
+		display: block;
+		width: $size;
+		height: $size;
+		margin: auto;
+		padding-top: 5px;
+		background-color: #ededed;
+		font-size: 1.7rem;
+		text-align: center;
+		color: black;
+		border-radius: 50%;
+	}
 }
 
 p{
@@ -84,6 +94,31 @@ p a{
 	}
 }
 
+//back to home link
+.top-link{
+	float: right;
+	margin-left: 25px;
+	color: $font-color;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: "Museo Sans 100";
+	font-size: .7rem;
+	@include transition(color .4s ease);
+	
+	&:hover{
+		color: $stress-color;
+	}
+}
+.top-link .home-link-icon,
+.top-link .home-blog-icon{
+	display: inline-block;
+	font-size: 1.3rem;
+	@include transition(transform 1s ease);
+}
+.top-link:hover .home-link-icon{
+	@include rotate(-180deg);
+}
+
 //blog pagination
 .pagination{
 	@extend .clearfix;
@@ -122,29 +157,45 @@ p a{
 .post-list{
 	list-style: none;
 }
-.post{
+.post-list .post{
 	margin: 20px 0 50px;
 	padding: 25px 20px;
 	background: darken($background-color, 5);
 }
-.post .post-title{
+.post-list .post-title{
 	@extend .delta;
 	margin-bottom: 0;
 }
-.post .post-title-link{
+.post-list .post-title-link{
 	color: $font-color;
 	text-decoration: none;
 }
-.post .post-date{
+.post-list .post-date{
 	font-size: .9rem;
 	display: block;
 	color: $cloak-color;
 }
-.post .post-description{
+.post-list .post-description{
 	margin-top: 12px;
 }
-.post .post-link{
+.post-list .post-link{
 	color: $stress-color;
 	text-decoration: none;
 	border-bottom: 1px solid $stress-color;
+}
+
+//individual post
+.main.post h1{
+	@extend .gamma;
+	margin: 60px 0 40px;
+}
+.post-content{
+	margin: 40px 0;
+}
+.post-content h2{
+	@extend .delta;
+	margin: 25px 0 10px;
+}
+.post-content iframe{
+	background: #e3e3e3;
 }
