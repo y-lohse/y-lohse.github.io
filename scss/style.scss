@@ -196,9 +196,48 @@ p a{
 	@extend .delta;
 	margin: 30px 0 10px;
 }
+
+//illustrations
+.post-content p > img,
+.post-content p > a > img{
+	float: right;
+	margin: 5px 0 5px 15px;
+}
+
+//figures
+.post-content figure{
+	position: relative;
+	width: 80%;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	
+	$displace: 35%;
+	$margin: 3%;
+	
+	&:nth-of-type(odd){
+		left: -$displace;
+		margin-right: -$displace + $margin;
+		float: left;
+	}
+	&:nth-of-type(even){
+		right: -$displace;
+		margin-left: -$displace + $margin;
+		float: right;
+	}
+}
+.post-content figcaption{
+	text-align: center;
+	background: darken($background-color, 5);
+	font-size: .9rem;
+	padding: 5px 8px;
+}
+
+//demos in posts
 .post-content iframe{
 	background: #e3e3e3;
 }
+
+//code in posts
 .post-content pre{
 	background: darken($background-color, 5);
 	line-height: 1.1;
