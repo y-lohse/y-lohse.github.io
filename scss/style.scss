@@ -194,8 +194,14 @@ p a{
 }
 .post-content h2{
 	@extend .delta;
-	margin: 25px 0 10px;
+	margin: 30px 0 10px;
 }
 .post-content iframe{
 	background: #e3e3e3;
+}
+.post-content pre{
+	background: darken($background-color, 5);
+	line-height: 1.1;
+	padding: 20px;
+	margin: 15px 0;
 }
