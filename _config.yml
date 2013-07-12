@@ -5,3 +5,5 @@ paginate: 8
 markdown: rdiscount
 
 img_path: /assets
+prettify_js: <!--?prettify lang=js linenums=true?-->
+prettify_html: <!--?prettify lang=html linenums=true?-->

@@ -202,6 +202,25 @@ p a{
 .post-content pre{
 	background: darken($background-color, 5);
 	line-height: 1.1;
-	padding: 20px;
 	margin: 15px 0;
+	padding: 20px;
+}
+//adjusting prettyfi linenumbers
+.post-content .linenums{
+	counter-reset: linenums;
+}
+.post-content .linenums li{
+	list-style-type: none;
+	counter-increment: linenums;
+	
+	&:before{
+		content: counter(linenums);
+		display: table-cell;
+		min-width: 30px;
+		font-size: .8rem;
+		color: #d8d8d8;
+	}
+}
+.post-content .linenums code{
+	display: table-cell;
 }

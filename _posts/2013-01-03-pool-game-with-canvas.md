@@ -29,9 +29,9 @@ I won't include all the code at every step, only relevant excerpts. If you get l
 
 The start is essentially the same as in the getting started guide. We create a simple HTML document, import the library and create a canvas.
 
-The HTML file: 
-
-<?prettify?>
+The HTML file:
+    
+{{ site.prettify_html }}
     
     <html>
     <head>
@@ -46,7 +46,7 @@ The HTML file:
 
 The game.js file:
 
-<?prettify?>
+{{ site.prettify_js }}
 
     Cannon.include('lib/math.js');
     Cannon.include('lib/display.js');
@@ -63,7 +63,7 @@ The game.js file:
 
 So far nothing fancy. In order to check that everything is fine, we'll add a simple rectangle that will serve as background.
 
-<?prettify?>
+{{ site.prettify_js }}
 
     Cannon.onReady = function(){
     	Cannon.use('*');
@@ -84,7 +84,7 @@ The first thing we'll need is balls. Since we're going to keep things simple, ba
 
 Movements are easy to represent codewise: they are just vectors. If the cue balls vector is 1;-1, then at each frame we just add 1 to it's x position and substract 1 to it's y position. Here's out Ball object :
 
-<?prettify?>
+{{ site.prettify_js }}
 
     Ball = Cannon.Display.Circle.extend({
     	__construct: function(x, y, radius){
@@ -100,7 +100,7 @@ Movements are easy to represent codewise: they are just vectors. If the cue ball
 Note that for this to work, the Ball object must be defined after the Cannon.Display package is loaded (makes sense). So you'll have to either put it in a separate js file and [include it](https://github.com/y-lohse/Cannon/wiki/Cannon#wiki-include), or define it at the start of the Cannon.onReady() function.
 Let's add our cue ball right away :
 
-<?prettify?>
+{{ site.prettify_js }}
 
     var canvas, cue;
 
@@ -122,7 +122,7 @@ Let's add our cue ball right away :
 
 Since we're going to use the cue ball in other places, it goes into the global scope. Right now you should see the cue ball sitting in the middle of the satge, not moving. We *did* set the x direction to 1, but we're not telling the ball to move yet. We'll add this now. This is part of the routines that will have to be run on every frame — we're going to set this up with the [canvas:render](https://github.com/y-lohse/Cannon/wiki/Cannon.Canvas#wiki-canvasrender) event.
 
-<?prettify?> 
+{{ site.prettify_js }}
    
     Cannon.onReady = function(){
     	Cannon.use('*');
@@ -158,7 +158,7 @@ Before we start handling collisions and shit, let's add the single piece of inte
 
 That may sound a bit complex, but it really isn't. We just need to watch for a mousedown followed by a mouseup event, and calculate the difference between both.
 
-<?prettify?>
+{{ site.prettify_js }}
     
     var canvas, cue;
     var shooting = false, 
@@ -185,7 +185,7 @@ That may sound a bit complex, but it really isn't. We just need to watch for a m
 
 When setting the new direction of the ball, we could have just done:
 
-<?prettify?>
+{{ site.prettify_js }}
 
     cue.direction = new Vector2D(end.x, end.y);
 
@@ -198,7 +198,7 @@ So we made sure the velocity of the ball can never exceed 10 pixels par render, 
 Ok, time to mix in some boundaries. We'll add some rails on the sides of the stage, so the ball can bounce off against them.
 Again, rails are just rectangles — and we have a [rectangle object standing by](https://github.com/y-lohse/Cannon/wiki/Cannon.Display.Rectangle). We'll apply the same process as with the ball to create a generic rail object.
 
-<?prettify?>
+{{ site.prettify_js }}
 
     Rail = Cannon.Display.Rectangle.extend({
     	__construct: function(x, y, width, height){
@@ -214,7 +214,7 @@ Again, rails are just rectangles — and we have a [rectangle object standing by
 
 And we'll add a rail right away
 
-<?prettify?>
+{{ site.prettify_js }}
 
     Cannon.onReady = function(){
     	//do stuff
@@ -242,7 +242,7 @@ The collision response is not built in, so we'll need to write it — but it's j
 
 If we want to use the Cannon SAT package, everything that needs to be checked for collisions needs to be either a BoundingBox or a BoundingCircle. We can just add this to our Ball and Rail objects. Since balls are moving around, we'll also create a shortcut to keep the BoundingCircle at the same spot than the actual circle.
 
-<?prettify?>
+{{ site.prettify_js }}
 
     Ball = Cannon.Display.Circle.extend({
     	__construct: function(x, y, radius){
@@ -278,7 +278,7 @@ If we want to use the Cannon SAT package, everything that needs to be checked fo
 
 *That* is the easy part — Cannon does it for you.
 
-<?prettify?>
+{{ site.prettify_js }}
 
     function onRender(){
     	cue.updateBounding();
@@ -302,7 +302,7 @@ You may also wonder why we suddenly multiply the direction vector by 0.97. This 
 
 The tricky part comes here, but again, it's just math. When the ball collides with a wall, we want it to bounce off in a realistic manner. The basic idea is to combine 2 vectors, one parallel to the collision axis, one perpendicular to it. Again,the principle is [explained here](http://www.metanetsoftware.com/technique/tutorialA.html). In our case, we won't apply any friction and the bounce factor = 1.
 
-<?prettify?>
+{{ site.prettify_js }}
 
 	if (col.colliding){
 		var parallel = cue.direction.clone();
@@ -335,7 +335,7 @@ Hey look, it already works !
 
 Before we add more balls and add collision detection and response to them, we'll wrap this part up by adding the missing rails. To do this, we'll add them to an array and loop through it at each render.
 
-<?prettify?>
+{{ site.prettify_js }}
 
 	var canvas, cue;
 	var shooting = false, shootStart;
@@ -370,7 +370,7 @@ Before we add more balls and add collision detection and response to them, we'll
 
 And the collision detection loop :
 
-<?prettify?>
+{{ site.prettify_js }}
 
 	function onRender(){
 		cue.updateBounding();
@@ -416,7 +416,7 @@ And the collision detection loop :
 The process is the same as with the rails.
 We start by adding a new ball to the scene :
 
-<?prettify?>
+{{ site.prettify_js }}
 
 	ball = new Ball(250, 50, 10);
 	canvas.addChild(ball);
@@ -425,7 +425,7 @@ We start by adding a new ball to the scene :
 
 Next, we check for a collision :
 
-<?prettify?>
+{{ site.prettify_js }}
 
 	var col = CollisionSolver.solveCollsion(cue.boundingCircle, ball.boundingCircle);
 	if (col.colliding){
@@ -434,7 +434,7 @@ Next, we check for a collision :
 
 This time, we are going to scale things up before responding to collision. We're going to create an array containing all balls, and loop through it to update positions, bounding circles, etc.
 
-<?prettify?>
+{{ site.prettify_js }}
 
 	var rails = [], balls = [];
 	var WALL_SIZE = 10, BALL_SIZE = 10;
@@ -459,7 +459,7 @@ This time, we are going to scale things up before responding to collision. We're
 
 And the collision part :
 
-<?prettify?>
+{{ site.prettify_js }}
 
 	for (var i = 0; i < balls.length; i++){
 		var ball1 = balls[i];
@@ -487,7 +487,7 @@ Note that at this point, the cue vs rail collisions behaves oddly — that's bec
 
 Again, math. For the ball vs ball response, we'll use [elastic collisions](http://en.wikipedia.org/wiki/Elastic_collision).
 
-<?prettify?>
+{{ site.prettify_js }}
 
 	if (col.colliding){
 		var nx = (ball2.x - ball1.x)/(2*ball1.radius);
@@ -516,7 +516,7 @@ Well, that's all there is to it.
 
 Now that all this works fine, we need to fix the bug we introduced by moving the updateBounding() call, and make every ball bounce off walls. We can do 2 in 1 by looping through the balls array inside the rail array:
 
-<?prettify?>
+{{ site.prettify_js }}
 	
 	for (var i = 0; i < rails.length; i++){
 		var rail = rails[i];
@@ -562,7 +562,7 @@ To complete our little pool game, we're going to add pockets in which we can sin
 
 Since you're probably starting to get how it works, I'll add the 6 pockets right away :
 
-<?prettify?>
+{{ site.prettify_js }}
 
 	var POCKET_SIZE = BALL_SIZE*1.7
 	var pockets= [];
@@ -594,7 +594,7 @@ Since you're probably starting to get how it works, I'll add the 6 pockets right
 
 Now we add the ball vs pocket collision, just after our ball vs ball loop.
 
-<?prettify?>
+{{ site.prettify_js }}
 
 	for (var i = 0; i < balls.length; i++){
 		var ball1 = balls[i];
@@ -641,7 +641,7 @@ Now we add the ball vs pocket collision, just after our ball vs ball loop.
 
 What we want to do here is remove the ball that was just sinked — except if it's the cue ball, then we'll reset it. The only thing to consider is we're looping through the balls array — if we remove one in the middle of the loop, things will start to break apart. Instead, we'll keep track of the sinked balls and remove them once we're done with the loop. 
 
-<?prettify?>
+{{ site.prettify_js }}
 	
 	var removeMe = [];
 	for (var i = 0; i < balls.length; i++){
