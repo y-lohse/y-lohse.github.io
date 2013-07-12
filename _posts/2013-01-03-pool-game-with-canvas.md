@@ -153,7 +153,7 @@ Now you should seethe cue ball moving away like in the example below (click anyw
 
 ## Adding interactivity
 
-[![pool](http://yannick-lohse.fr/wp-content/uploads/2013/01/pool.jpg)](http://yannick-lohse.fr/wp-content/uploads/2013/01/pool.jpg)
+[![pool]({{ site.img_path }}/2013/01/pool.jpg)](http://yannick-lohse.fr/wp-content/uploads/2013/01/pool.jpg)
 Before we start handling collisions and shit, let's add the single piece of interactivity there will be. We want a shooting mechanism, and we want it easy. The pointer of the mouse shall represent the tip of the cue — when the user clicks the cue ball, he start a shot, he then moves his mouse away from the cue ball as he would move the cue away. When he releases the mouse, the shot fires, proportionally to the distance he moved.
 
 That may sound a bit complex, but it really isn't. We just need to watch for a mousedown followed by a mouseup event, and calculate the difference between both.

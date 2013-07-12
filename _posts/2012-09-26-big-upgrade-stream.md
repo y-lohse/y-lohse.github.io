@@ -18,7 +18,7 @@ I'm very exited to announce a new major upgrade to [Look At Stream](http://looka
 The first solution we are going to try out is user accounts. This will allow us to provide a slightly personalized experience to our users, and the ability to send them automated information and reminders through emails. We tried to keep things as simple as possible — the sign up form is short, but we might provide openID or Facebook Connect authentication in the near future. We are really curious to see how users will react to this and if they will sign up. We have a couple of other feature ideas for registered users, and we will roll them out in the near future.
 
 <figure>
-	![Screenshot of the Look At Stream menus](http://yannick-lohse.fr/wp-content/uploads/2012/09/LASmenus.png "LoolAtSream menus")
+	![Screenshot of the Look At Stream menus]({{ site.img_path }}/2012/09/LASmenus.png "LoolAtSream menus")
 	<figcaption>
 		Above, the original menu, below, the new version
 	</figcaption>
@@ -39,7 +39,7 @@ I'm not sure if the testing process is really good (always showing the fixed nav
 I faced some technical problems, namely the changes I made to the less files wouldn't be reflected on the site. I stumbled upon [this issue](https://github.com/cloudhead/less.js/issues/47 "Less files cached inside the localstorage"), apparently well know but unfixed for now... but the workarounds suggested didn't do the trick for me. I ended up using [winless](http://winless.org/ "Winless, a Less compile for windows with a GUI") to compile my less files on the fly — it barely slows down the progress and works just fine.
 
 <figure>
-	![Look At Stream homepage](http://yannick-lohse.fr/wp-content/uploads/2012/09/homepages.png "LAShomepages")
+	![Look At Stream homepage]({{ site.img_path }}/2012/09/homepages.png "LAS home pages")
 	<figcaption>
 		Above, the first Look At Stream homepage, and the new one below.
 	</figcaption>

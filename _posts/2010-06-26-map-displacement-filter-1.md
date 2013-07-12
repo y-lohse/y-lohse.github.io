@@ -14,7 +14,7 @@ status: publish
 type: post
 published: true
 ---
-[![A map displaced image of chicago](http://yannick-lohse.fr/wp-content/uploads/2010/06/chicdis-300x222.jpg)](http://yannick-lohse.fr/2010/06/map-displacement-filter-1/)
+[![A map displaced image of chicago]({{ site.img_path }}/2010/06/chicdis-300x222.jpg)](http://yannick-lohse.fr/2010/06/map-displacement-filter-1/)
 If you don't give a fuck about how this works (and I totally understand), [the demo is right there](http://code.yannick-lohse.fr/mapdisplacement/bitmap.php "Map Displacement with a canvas"). Right now this is a mere proof of concept : the technique used works, but doesn't use the full potential. Another, better demo is almost finished, I'll publish it in a few days.
 
 If you're interested in how this works… keep on reading :)
@@ -32,7 +32,7 @@ Now of course to do this, you need to have access to the pixels of any picture�
 
 ## Performances
 
-[![Image used to map displace another image.](http://yannick-lohse.fr/wp-content/uploads/2010/06/bubble.png)](http://yannick-lohse.fr/wp-content/uploads/2010/06/bubble.png)Yeah, performances… they are awe full. But to be fair, it's quite understandable.
+[![Image used to map displace another image.]({{ site.img_path }}/2010/06/bubble.png)](http://yannick-lohse.fr/wp-content/uploads/2010/06/bubble.png)Yeah, performances… they are awe full. But to be fair, it's quite understandable.
 Fetching the pixels of an image returns an array containing for each pixels the red, green, blue and alpha value of the given pixel, between 0 and 255. This means that for a 300*300 pixels picture, you'll end up having an array with 360 000 values in it. And then we're going to access them and change them, perhaps several times each. Doing a 300*300 loop isn't long, but accessing values held in such a big array becomes painfull after a few hundred iterations.
 
 ## Optimization

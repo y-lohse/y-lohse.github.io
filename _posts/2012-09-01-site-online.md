@@ -11,7 +11,7 @@ published: true
 In april, I noticed my site was suddenly down and after a quick investigation, it turned out that my hosting service had deactivated it because it contained some malware. I had stopped my bloging a vear year ago, and didn't update wordpress since — so someone used a flaw that wasn't corrected on the version I was used, and there we go. It didn't bother me that much, I had no big use of my website at this point, so I left it offline.
 
 <figure>
-	![Me in peru, playing the quena](http://yannick-lohse.fr/wp-content/uploads/2012/09/DSCN0478.jpg "Me in Peru")
+	![Me in peru, playing the quena]({{ site.img_path }}/2012/09/DSCN0478.jpg "Me in Peru")
 	<figcaption>
 		A picture of me learning to play the quena while hiking &mdash; a combination you'd like to avoid.
 	</figcaption>

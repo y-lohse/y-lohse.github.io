@@ -33,7 +33,7 @@ But when I was done, I had another idea : why shouldn't I explain how things wor
 
 The small black circles are just the same as on the original, the representation of asteroids. They have a red, semi transparent circle around them : this represents their field of attraction. Every other asteroid located within this field will be attracted to the source, the force of the attraction being based on the relative masses of the planets. The masses are in scale with the radiuses of the circles and you can see how quickly the attraction fields grows as the asteroid gains in mass.
 
-[![A schema of an asteroid in debug mode](http://yannick-lohse.fr/wp-content/uploads/2012/09/explain.png "planetarium explanation")](http://yannick-lohse.fr/wp-content/uploads/2012/09/explain.png)
+[![A schema of an asteroid in debug mode]({{ site.img_path }}/2012/09/explain.png "planetarium explanation")](http://yannick-lohse.fr/wp-content/uploads/2012/09/explain.png)
 Each asteroid also has a green line pointing away from it ; this represents the current direction and speed of the asteroid. I use vectors in my code to calculate the movements, and the green lines are simply the visual representation of these vectors : the longer the line, the more momentum the asteroid has.
 
 Finally, you'll notice light grey squares all over the place : this is the representation of the tile map I use. During every rendering loop, I have to look up every asteroid in the field of attraction of every asteroid, check whether they collide or not, and if not change their direction and speed.

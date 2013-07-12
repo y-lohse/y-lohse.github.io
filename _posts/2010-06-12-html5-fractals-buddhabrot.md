@@ -9,9 +9,9 @@ status: publish
 type: post
 published: true
 ---
-[![BuddhaBrot](http://yannick-lohse.fr/wp-content/uploads/2010/06/buddha-298x300.jpg "buddha")](http://yannick-lohse.fr/2010/06/html5-fractals-buddhabrot/)
+[![BuddhaBrot]({{ site.img_path }}/2010/06/buddha-298x300.jpg "buddha")](http://yannick-lohse.fr/2010/06/html5-fractals-buddhabrot/)
 
-[![Animated version of the buddhabrot](http://yannick-lohse.fr/wp-content/uploads/2010/06/buddha.gif "Animated Buddha")](http://yannick-lohse.fr/wp-content/uploads/2010/06/buddha.gif)
+[![Animated version of the buddhabrot]({{ site.img_path }}/2010/06/buddha.gif "Animated Buddha")](http://yannick-lohse.fr/wp-content/uploads/2010/06/buddha.gif)
 
 [Here's one more shot on fractals in HTML5](http://code.yannick-lohse.fr/fractals/buddha.php "Buddhabrot fractals"), and this one is pretty cool: it generates a [Buddhabrot](http://en.wikipedia.org/wiki/Buddhabrot "Wikipedia page on Buddhabrot").
 

@@ -8,7 +8,7 @@ status: publish
 type: post
 published: true
 ---
-[![Symphotweet screenshot](http://yannick-lohse.fr/wp-content/uploads/2010/06/symphotweet-300x133.jpg "symphotweet")](http://yannick-lohse.fr/2010/06/symphotweet/)
+[![Symphotweet screenshot]({{ site.img_path }}/2010/06/symphotweet-300x133.jpg "symphotweet")](http://yannick-lohse.fr/2010/06/symphotweet/)
 Ever wondered what your twitter account would sound like if it got converted to music? Well now you can find it out, with [SymphoTweet](http://code.yannick-lohse.fr/symphotweet/ "Twitter Symphony") \o/ !
 
 ## Update (13-7-7)
