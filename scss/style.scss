@@ -28,11 +28,14 @@ hr{
 	}
 }
 
-p{
+p,
+ul,
+ol{
 	margin-bottom: 18px;
 	font-family: 'Museo 300';
 }
-p a{
+p a,
+figcaption a{
 	color: $stress-color;
 }
 
@@ -202,27 +205,73 @@ p a{
 .post-content p > a > img{
 	float: right;
 	margin: 5px 0 5px 15px;
+	max-width: 50%;
 }
 
 //figures
 .post-content figure{
 	position: relative;
-	width: 80%;
 	margin-top: 15px;
-	margin-bottom: 15px;
-	
-	$displace: 35%;
-	$margin: 3%;
+	margin-bottom: 10px;
 	
 	&:nth-of-type(odd){
-		left: -$displace;
-		margin-right: -$displace + $margin;
 		float: left;
+		text-align: right;
 	}
 	&:nth-of-type(even){
-		right: -$displace;
-		margin-left: -$displace + $margin;
 		float: right;
+		text-align: left;
+	}
+	
+	@include width-matches($large-desktop){
+		width: 80%;
+		$displace: 35%;
+		$margin: 3%;
+		
+		&:nth-of-type(odd){
+			left: -$displace;
+			margin-right: -$displace + $margin;
+		}
+		&:nth-of-type(even){
+			right: -$displace;
+			margin-left: -$displace + $margin;
+		}
+	}
+	@include width-matches($small-desktop){
+		width: 60%;
+		
+		$displace: 30%;
+		$margin: 2%;
+		
+		&:nth-of-type(odd){
+			left: -$displace;
+			margin-right: -$displace + $margin;
+		}
+		&:nth-of-type(even){
+			right: -$displace;
+			margin-left: -$displace + $margin;
+		}
+	}
+	@include width-matches($tablet){
+		width: 50%;
+		
+		$displace: 10%;
+		$margin: 2%;
+		
+		&:nth-of-type(odd){
+			left: -$displace;
+			margin-right: -$displace + $margin;
+		}
+		&:nth-of-type(even){
+			right: -$displace;
+			margin-left: -$displace + $margin;
+		}
+	}
+	@include width-matches($mobile){
+		position: static;
+		float: none !important;
+		width: 80%;
+		margin: 25px auto;
 	}
 }
 .post-content figcaption{
@@ -230,6 +279,12 @@ p a{
 	background: darken($background-color, 5);
 	font-size: .9rem;
 	padding: 5px 8px;
+}
+
+//align list properyl
+.post-content ul,
+.post-content ol{
+	list-style-position: outside;
 }
 
 //demos in posts
