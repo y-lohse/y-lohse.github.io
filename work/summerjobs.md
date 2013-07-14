@@ -1,6 +1,7 @@
 ---
 layout: work
 title: Summer jobs
+description: My time in the coal mine. Kinda'.
 next_url: /work/travian.html
 next_title: Managing a large forum
 ---

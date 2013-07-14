@@ -1,6 +1,7 @@
 ---
 layout: work
 title: Look At Stream
+description: Look At Stream used to be a website about e-sports and lots of streaming. Here's my part in it.
 next_url: /work/caldera.html
 next_title: Designing UI and UX
 ---

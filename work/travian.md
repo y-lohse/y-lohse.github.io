@@ -1,6 +1,7 @@
 ---
 layout: work
 title: Board Admin @ Travian Games
+description: I was board admin of a very large forum at some point.
 next_url: /work/internships.html
 next_title: Creating web maps as an intern
 ---

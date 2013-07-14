@@ -1,6 +1,7 @@
 ---
 layout: work
 title: Internships
+description: What I did during my 2 internships in Switzerland.
 next_url: /work/eclypsis.html
 next_title: Building a browser-based game
 ---
