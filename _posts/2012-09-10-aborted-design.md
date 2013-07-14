@@ -16,7 +16,7 @@ status: publish
 type: post
 published: true
 ---
-[![Screenshot of the redesign attempt]({{ site.img_path }}/2012/09/redesign-300x300.png "redesign")](http://code.yannick-lohse.fr/redesign-attempt/)
+[![Screenshot of the redesign attempt]({{ site.img_path }}/2012/09/redesign.png "redesign")](http://code.yannick-lohse.fr/redesign-attempt/)
 Yet another show off post - I guess this isn't really inspiring or anything, but it might be worth looking into. A couple of month ago, I tried out a navigation concept for what could have been my new website. I wanted something really different from what was traditionally done, something that would convey the idea of fun, adventure, etc. Things that are dear to me when talking of the web. So I came up with this idea of gigantic area that you could explore pretty much like a digital map, zooming, panning…
 
 [The best is probably to go straight to the page to see how it works.](http://code.yannick-lohse.fr/redesign-attempt/) You can pan the page like a map, you can click the links, the bubbles… and there is a fallback navigation menu in case you get stuck. If it had worked out, I would probably have hidden some easter egs somewhere in the page for people to find, it could also be possible to embed javascript/flash demos…

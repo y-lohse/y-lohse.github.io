@@ -21,7 +21,7 @@ According to the last modification date of the file, [I created this jquery plug
 - what fancy things can you do with the (at that time fairly) new text-shadow css property ?
 - how do you write your own jquery plugin ?
 
-[![Waterfall effect on text]({{ site.img_path }}/2012/09/elemental-300x122.png "elemental")](http://yannick-lohse.fr/wp-content/uploads/2012/09/elemental.png)
+[![Waterfall effect on text]({{ site.img_path }}/2012/09/elemental.png "elemental")](http://yannick-lohse.fr/wp-content/uploads/2012/09/elemental.png)
 So I very naturally combined both things into one, creating this elemental plugin. I don't see any real use cases except if you want to create a web page that looks like it was made in the 90's.
 
 On the css part, it's quite simple. I just stack a couple of text shadows on top of each other; the change in size and color gives the impression of a gradient.

@@ -14,7 +14,7 @@ status: publish
 type: post
 published: true
 ---
-[![A map displaced image of chicago]({{ site.img_path }}/2010/06/chicdis-300x222.jpg)](http://yannick-lohse.fr/2010/06/map-displacement-filter-1/)
+[![A map displaced image of chicago]({{ site.img_path }}/2010/06/chicdis.jpg)](http://yannick-lohse.fr/2010/06/map-displacement-filter-1/)
 If you don't give a fuck about how this works (and I totally understand), [the demo is right there](http://code.yannick-lohse.fr/mapdisplacement/bitmap.php "Map Displacement with a canvas"). Right now this is a mere proof of concept : the technique used works, but doesn't use the full potential. Another, better demo is almost finished, I'll publish it in a few days.
 
 If you're interested in how this works… keep on reading :)

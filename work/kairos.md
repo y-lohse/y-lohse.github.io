@@ -5,7 +5,7 @@ title: Lead developer @ Kairos Media
 During my last year at the university in 2009, I had the opportunity to study in alternation, ie. studying a week at the university, then working a week for a company. I was hired by a startup called Kairos Media and worked there for a year.
 
 <figure>
-	![Screenshot of mesinvendus.fr]({{ site.img_path }}/2012/08/mesinvendus-300x184.jpg)
+	![Screenshot of mesinvendus.fr]({{ site.img_path }}/2012/08/mesinvendus.jpg)
 	<figcaption>
 		MesInvendus.fr, the flagship of Kairos Media.
 	</figcaption>
