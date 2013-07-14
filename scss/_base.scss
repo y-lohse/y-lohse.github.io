@@ -31,9 +31,11 @@ $default-transition-duration: 0.2s;
 	text-decoration: none;
 	@include transition(background .4s ease, color .4s ease);
 	
-	&:hover{
+	&:hover,
+	&:focus{
 		background: darken($background-color, 8);
 		color: $stress-color;
+		outline: none;
 	}
 }
 
@@ -63,7 +65,8 @@ you can use the generic selector below, but it's slower:
 .icon-file-css:before, 
 .icon-book:before, 
 .icon-pen:before,
-.icon-mobius:before {
+.icon-mobius:before,
+.icon-user:before {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -96,4 +99,7 @@ you can use the generic selector below, but it's slower:
 }
 .icon-mobius:before {
 	content: "\e007";
+}
+.icon-user:before {
+	content: "\e008";
 }

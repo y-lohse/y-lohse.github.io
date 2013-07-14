@@ -50,6 +50,8 @@ figcaption a{
 	}
 }
 
+//61.77%, 38.22%
+
 //default
 .main .cloak{
 	color: $cloak-color;
@@ -107,9 +109,11 @@ figcaption a{
 	text-decoration: none;
 	padding: 4px 2px;
 	
-	&:hover{
+	&:hover,
+	&:focus{
 		color: $stress-color;
 		background: darken($background-color, 5);
+		outline: none;
 	}
 }
 .main ol.works .date{
