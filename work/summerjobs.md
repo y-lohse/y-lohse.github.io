@@ -1,6 +1,8 @@
 ---
 layout: work
 title: Summer jobs
+next_url: /work/travian.html
+next_title: Managing a large forum
 ---
 Before starting actual work, I did a couple of summer jobs when I became 16. I worked as a do-it-all-guy in my city (gardening, cleaning the grounds, etc), and then at a metal factory in Switzerland, again mainly cleaning metal pieces, loading trails of metal pieces, straightening metal pieces... well, you get the idea. 
 

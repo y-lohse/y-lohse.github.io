@@ -1,6 +1,8 @@
 ---
 layout: work
 title: Eclypsis
+next_url: /work/kairos.html
+next_title: Developer in a startup
 ---
 From 2007 to 2010, I worked on a fully-fledged online game called Eclypsis and as of today it's still one of the most chalenging things I've done.
 

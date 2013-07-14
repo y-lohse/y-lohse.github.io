@@ -1,6 +1,8 @@
 ---
 layout: work
 title: Internships
+next_url: /work/eclypsis.html
+next_title: Building a browser-based game
 ---
 At nearly 18 I was in my first year of studies, and we had to do a 2 week intern ship in any company. A week before the start of the intern ship, I still hadn't found a company I could do my intern ship at - or rather I hadn't been searching one. One of my best friends dad happened to own a [software company in Switzerland](http://www.cadrz.ch/content.cfm?nav=2&amp;content=5), and he agreed to hire me.
 

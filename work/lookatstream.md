@@ -1,6 +1,8 @@
 ---
 layout: work
 title: Look At Stream
+next_url: /work/caldera.html
+next_title: Designing UI and UX
 ---
 During my work at [Groupe ESC Troyes](/work/get.html) I almost didn't write a line of code outside my work. My job was exiting and my previously in-existent design skills had grown by necessity, such as I was now good enough to handle any web project almost on my own – it's just that I didn't want to do it.
 

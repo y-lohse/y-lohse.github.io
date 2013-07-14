@@ -1,6 +1,8 @@
 ---
 layout: work
 title: Lead developer @ Kairos Media
+next_url: /work/get.html
+next_title: Redesigning a big website
 ---
 During my last year at the university in 2009, I had the opportunity to study in alternation, ie. studying a week at the university, then working a week for a company. I was hired by a startup called Kairos Media and worked there for a year.
 

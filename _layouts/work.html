@@ -8,5 +8,13 @@
 	<div class="post-content">
 		{{ content }}
 	</div>
+	
+	<nav class="pagination">						
+		{% if page.next_url %}
+		<a href="{{ page.next_url }}" class="next">
+			After that : {{ page.next_title }}
+		</a>
+		{% endif %}
+	</nav>
 </div>
 {% include footer.html %}

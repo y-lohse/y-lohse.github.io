@@ -1,6 +1,8 @@
 ---
 layout: work
 title: Groupe ESC Troyes
+next_url: /work/lookatstream.html
+next_title: Building an e-sports streaming agregator
 ---
 From 2010 to 2013, I worked for a company called [Groupe ESC Troyes](http://get-formation.fr/ "Groupe ESC Troyes"). It's an educationnal company that encompasses a management school, a design school and lots of other education-related activities. I created and took care of their websites during almost 3 years.
 
