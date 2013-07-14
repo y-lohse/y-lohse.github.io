@@ -228,6 +228,10 @@ figcaption a{
 	@extend .delta;
 	margin: 30px 0 10px;
 }
+.post-content h3{
+	@extend .epsilon;
+	margin: 25px 0 5px;
+}
 
 //illustrations
 .post-content p > img,
