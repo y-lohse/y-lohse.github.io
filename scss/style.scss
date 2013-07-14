@@ -32,7 +32,7 @@ p,
 ul,
 ol{
 	margin-bottom: 18px;
-	font-family: 'Museo 300';
+	font-family: $body-copy-font;
 }
 p a,
 figcaption a{
@@ -78,7 +78,8 @@ figcaption a{
 .main .home-headline{
 	@extend .alpha;
 	margin: 30px auto 13px;
-	font-family: "Museo Sans 100";
+	font-family: $heading-font;
+	font-weight: 100;
 	@include hyphens(none);
 }
 .main .home-subheadline{
@@ -132,7 +133,8 @@ figcaption a{
 	color: $font-color;
 	text-decoration: none;
 	text-transform: uppercase;
-	font-family: "Museo Sans 100";
+	font-family: $heading-font;
+	font-weight: 100;
 	font-size: .7rem;
 	@include transition(color .4s ease);
 	
