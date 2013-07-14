@@ -97,6 +97,30 @@ figcaption a{
 	}
 }
 
+//work page stuff
+.main ol.works{
+	list-style: none;
+}
+.main ol.works a{
+	display: block;
+	color: $font-color;
+	text-decoration: none;
+	padding: 4px 2px;
+	
+	&:hover{
+		color: $stress-color;
+		background: darken($background-color, 5);
+	}
+}
+.main ol.works .date{
+	display: inline-block;
+	min-width: 130px;
+	margin-right: 10px;
+	text-align: right;
+	color: $cloak-color;
+	font-size: .8rem;
+}
+
 //back to home link
 .top-link{
 	float: right;
@@ -113,7 +137,8 @@ figcaption a{
 	}
 }
 .top-link .home-link-icon,
-.top-link .home-blog-icon{
+.top-link .blog-link-icon,
+.top-link .work-link-icon{
 	display: inline-block;
 	font-size: 1.3rem;
 	@include transition(transform 1s ease);
@@ -224,7 +249,7 @@ figcaption a{
 	}
 	
 	@include width-matches($large-desktop){
-		width: 80%;
+		max-width: 80%;
 		$displace: 35%;
 		$margin: 3%;
 		
@@ -238,7 +263,7 @@ figcaption a{
 		}
 	}
 	@include width-matches($small-desktop){
-		width: 60%;
+		max-width: 60%;
 		
 		$displace: 30%;
 		$margin: 2%;
@@ -253,7 +278,7 @@ figcaption a{
 		}
 	}
 	@include width-matches($tablet){
-		width: 50%;
+		max-width: 50%;
 		
 		$displace: 10%;
 		$margin: 2%;
@@ -270,14 +295,14 @@ figcaption a{
 	@include width-matches($mobile){
 		position: static;
 		float: none !important;
-		width: 80%;
+		max-width: 80%;
 		margin: 25px auto;
 	}
 }
 .post-content figcaption{
 	text-align: center;
 	background: darken($background-color, 5);
-	font-size: .9rem;
+	font-size: .8rem;
 	padding: 5px 8px;
 }
 
