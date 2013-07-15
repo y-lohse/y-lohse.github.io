@@ -76,15 +76,23 @@ figcaption a{
 
 //homepage stuff
 .main .home-headline{
-	@extend .alpha;
+	@extend .beta;
 	margin: 30px auto 13px;
 	font-family: $heading-font;
 	font-weight: 100;
 	@include hyphens(none);
+	
+	@include width-matches($mobile){
+		@extend .delta;
+	}
 }
 .main .home-subheadline{
 	@extend .delta;
 	color: $font-color;
+	
+	@include width-matches($mobile){
+		@extend .epsilon;
+	}
 }
 .main .linklist{
 	list-style: none;
