@@ -35,8 +35,18 @@ ol{
 	font-family: $body-copy-font;
 }
 p a,
+ol a,
+ul a,
 figcaption a{
 	color: $stress-color;
+}
+ol a,
+ul a{
+	text-decoration: none;
+	
+	&:hover{
+		border-bottom: 1px solid $stress-color;
+	}
 }
 
 .container{
@@ -339,6 +349,33 @@ figcaption a{
 .post-content ul,
 .post-content ol{
 	list-style-position: outside;
+}
+
+//pull quotes
+.post-content blockquote{
+	@extend .delta;
+	margin: 35px 0;
+	position: relative;
+	color: $stress-color;
+	
+	&:before,
+	&:after {
+		height: 5rem;
+		opacity: .4;
+		position: absolute;
+		font-size: 5rem;
+		font-family: Garamond;
+	}
+	&:before {
+		content: '“';
+		top:  -2.5rem;
+		left: -3rem;
+	}
+	&:after {
+		content: '”';
+		bottom: -1.5rem;
+		right: -1rem;
+	}
 }
 
 //demos in posts
