@@ -124,6 +124,12 @@ figcaption a{
 		background: darken($background-color, 5);
 		outline: none;
 	}
+	
+	@include width-matches($mobile){
+		margin: 20px 0;
+		line-height: 1.2;
+		padding: 8px;
+	}
 }
 .main ol.works .date{
 	display: inline-block;
@@ -132,6 +138,11 @@ figcaption a{
 	text-align: right;
 	color: $cloak-color;
 	font-size: .8rem;
+	
+	@include width-matches($mobile){
+		display: inline;
+		margin-right: 0;
+	}
 }
 
 //back to home link
