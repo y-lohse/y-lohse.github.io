@@ -3,6 +3,7 @@
 html,
 body{
 	background-color: $background-color;
+	height: 100%;
 }
 
 hr{
@@ -39,6 +40,7 @@ figcaption a{
 	color: $stress-color;
 }
 
+//most pages
 .container{
 	max-width: 600px;
 	margin: auto;
@@ -48,6 +50,21 @@ figcaption a{
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+}
+
+//pages with lesscontent
+.wrapper{
+	background-image: url('/img/zenstones.jpg');
+	background-position: top center;
+	@include background-size(cover);
+	max-height: 100%;
+	overflow-y: scroll;
+}
+.leftcontainer{
+	width: 38.22%;
+	background-color: rgba($background-color, .8);
+	margin: 0;
+	padding: 20px;
 }
 
 //61.77%, 38.22%
