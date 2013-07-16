@@ -34,7 +34,7 @@ But when I was done, I had another idea : why shouldn't I explain how things wor
 The small black circles are just the same as on the original, the representation of asteroids. They have a red, semi transparent circle around them : this represents their field of attraction. Every other asteroid located within this field will be attracted to the source, the force of the attraction being based on the relative masses of the planets. The masses are in scale with the radiuses of the circles and you can see how quickly the attraction fields grows as the asteroid gains in mass.
 
 <figure>
-	![A schema of an asteroid in debug mode]({{ site.img_path }}/2012/09/explain.png "planetarium explanation")
+![A schema of an asteroid in debug mode]({{ site.img_path }}/2012/09/explain.png "planetarium explanation")
 </figure>
 
 Each asteroid also has a green line pointing away from it ; this represents the current direction and speed of the asteroid. I use vectors in my code to calculate the movements, and the green lines are simply the visual representation of these vectors : the longer the line, the more momentum the asteroid has.
@@ -50,10 +50,10 @@ Things quickly became **very** interesting — for me. Turns out I didn't actual
 This very problem of programmers not visualizing what they actually do is being studied and tackled by the brilliant mind of [Bret Victor](http://worrydream.com). I had watched this talk of him a couple of month ago, but while I couldn't refrain laughing of excitement when I saw it, it's the first time I actually *apply* the concept he speaks of to one of my own projects. It's awesome.
 
 <figure>
-	<iframe src="http://player.vimeo.com/video/36579366?byline=0" frameborder="0" width="100%" height="281"> </iframe>
-	<figcaption>
-		[Bret Victor — Inventing on Principle](http://vimeo.com/36579366) from [CUSEC](http://vimeo.com/cusec) on [Vimeo](http://vimeo.com).
-	</figcaption>
+<iframe src="http://player.vimeo.com/video/36579366?byline=0" frameborder="0" width="100%" height="281"> </iframe>
+<figcaption>
+[Bret Victor — Inventing on Principle](http://vimeo.com/36579366) from [CUSEC](http://vimeo.com/cusec) on [Vimeo](http://vimeo.com).
+</figcaption>
 </figure>
 
 I'm really pleased to actually understand and feel what a difference this process makes, and not just imagining it — I won't push this asteroid demo much further, but I'm impatient to use this technique on other projects.

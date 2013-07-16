@@ -8,10 +8,10 @@ next_title: Designing UI and UX
 During my work at [Groupe ESC Troyes](/work/get.html) I almost didn't write a line of code outside my work. My job was exiting and my previously in-existent design skills had grown by necessity, such as I was now good enough to handle any web project almost on my own – it's just that I didn't want to do it.
 
 <figure>
-	![The look at stream logo]({{ site.img_path }}/2012/08/las.png)
-	<figcaption>
-		The Look At Stream logo, courtesy of my friend [Loic Herr](http://herrloc.fr/ "Loic's website")
-	</figcaption>
+![The look at stream logo]({{ site.img_path }}/2012/08/las.png)
+<figcaption>
+The Look At Stream logo, courtesy of my friend [Loic Herr](http://herrloc.fr/ "Loic's website")
+</figcaption>
 </figure>
 
 After my first conference, [the Web Event Lyon](http://event.lafermeduweb.net/), I felt the urge to create things on my own again. [Clowrid](http://www.bruno-faugeroux.fr/), a friend I had met while working on [Eclypsis](/work/eclypsis.html), was building a website called [Look At Stream](http://lookatstream.com/ "Live streams from the biggest games out there") and asked if I wanted to help out – I hesitated a split second and said yes.

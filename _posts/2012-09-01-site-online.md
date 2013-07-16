@@ -11,10 +11,10 @@ published: true
 In april, I noticed my site was suddenly down and after a quick investigation, it turned out that my hosting service had deactivated it because it contained some malware. I had stopped my bloging a vear year ago, and didn't update wordpress since — so someone used a flaw that wasn't corrected on the version I was used, and there we go. It didn't bother me that much, I had no big use of my website at this point, so I left it offline.
 
 <figure>
-	![Me in peru, playing the quena]({{ site.img_path }}/2012/09/peru.jpg "Me in Peru")
-	<figcaption>
-		A picture of me learning to play the quena while hiking &mdash; a combination you'd like to avoid.
-	</figcaption>
+![Me in peru, playing the quena]({{ site.img_path }}/2012/09/peru.jpg "Me in Peru")
+<figcaption>
+A picture of me learning to play the quena while hiking &mdash; a combination you'd like to avoid.
+</figcaption>
 </figure>
 
 However, I recently attended my first conference, the [Web Event Lyon](http://event.lafermeduweb.net/ "Web Event Lyon 2012"), and had the opportunity to chat and listen to some very inspiring people — so inspiring that when I came home, I felt the urge to create things again. Over the last year and a half, pretty much all my energy went into my job, but I felt I now could work again both day and nights. Summer vacations came right away, preventing me from actually starting anything. I spent a week in bretagne and a month in Peru, and both travels gave me even more motivation and creativity.

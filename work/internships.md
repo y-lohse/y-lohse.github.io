@@ -10,10 +10,10 @@ At nearly 18 I was in my first year of studies, and we had to do a 2 week intern
 Life as a trainee there was excellent – they let me do real work, on internal products. The two weeks went great, and I asked if I could stay to work over the summer. The company being happy with my work so far, this wasn't a problem at all and I worked there for 2 more month, mainly helping debugging a software used to sync user accounts between different systems.
 
 <figure>
-	![GIS map]({{ site.img_path }}/2012/08/screen1.jpg)
-	<figcaption>
-		A screenshot of the tool I created in my 2nd internship at CAD Rechenzentrum
-	</figcaption>
+![GIS map]({{ site.img_path }}/2012/08/screen1.jpg)
+<figcaption>
+A screenshot of the tool I created in my 2nd internship at CAD Rechenzentrum
+</figcaption>
 </figure>
 
 Boy did I learn a lot about programming.
