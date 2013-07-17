@@ -93,7 +93,7 @@ ul a{
 	@include hyphens(none);
 	
 	@include width-matches($mobile){
-		@extend .delta;
+		font-size: 3rem;
 	}
 }
 .main .home-subheadline{
@@ -101,7 +101,7 @@ ul a{
 	color: $font-color;
 	
 	@include width-matches($mobile){
-		@extend .epsilon;
+		font-size: 1.5rem;
 	}
 }
 .main .linklist{
@@ -349,6 +349,14 @@ ul a{
 .post-content ul,
 .post-content ol{
 	list-style-position: outside;
+}
+.post-content ol a,
+.post-content ul a{
+	text-decoration: none;
+	
+	&:hover{
+		border-bottom: 1px solid $stress-color;
+	}
 }
 
 //pull quotes
