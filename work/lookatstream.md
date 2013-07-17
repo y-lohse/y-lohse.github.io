@@ -5,7 +5,7 @@ description: Look At Stream used to be a website about e-sports and lots of stre
 next_url: /work/caldera.html
 next_title: Designing UI and UX
 ---
-During my work at [Groupe ESC Troyes](/work/get.html) I almost didn't write a line of code outside my work. My job was exiting and my previously in-existent design skills had grown by necessity, such as I was now good enough to handle any web project almost on my own – it's just that I didn't want to do it.
+During my work at [Groupe ESC Troyes](/work/get.html) I almost didn't write a line of code outside my work. My job was exciting and my previously in-existent design skills had grown by necessity, such as I was now good enough to handle any web project almost on my own – it's just that I didn't want to do it.
 
 <figure>
 ![The look at stream logo]({{ site.img_path }}/2012/08/las.png)
