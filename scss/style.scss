@@ -40,14 +40,6 @@ ul a,
 figcaption a{
 	color: $stress-color;
 }
-ol a,
-ul a{
-	text-decoration: none;
-	
-	&:hover{
-		border-bottom: 1px solid $stress-color;
-	}
-}
 
 .container{
 	max-width: 600px;
