@@ -6,4 +6,5 @@ markdown: rdiscount
 
 img_path: /assets
 prettify_js: <!--?prettify lang=js linenums=true?-->
+prettify_css: <!--?prettify lang=css linenums=true?-->
 prettify_html: <!--?prettify lang=html linenums=true?-->
