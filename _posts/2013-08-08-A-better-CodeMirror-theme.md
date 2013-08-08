@@ -24,7 +24,7 @@ The line on which the caret is currently positionned stands out from the rest wi
 <figure>
 ![The Code Mirror DOM]({{ site.img_path }}/2013/08/cursor.png)
 <figcaption>
-	.CodeMirror-cursor is the caret element, the reste above are individual lines of code
+.CodeMirror-cursor is the caret element, the reste above are individual lines of code
 </figcaption>
 </figure>
 
