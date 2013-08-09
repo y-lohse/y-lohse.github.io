@@ -19,6 +19,8 @@ It's not only makes code good looking and very readable, it also comes with some
 
 ### Current line highlighting
 
+**Update**: [Miguel Castillo](https://github.com/MiguelCastillo) was kind enough to point me an option in the Brackets menu that makes it dead simple to higghlight the current line, so the code below isn't actually used anymore.
+
 The line on which the caret is currently positionned stands out from the rest with its light background so it's easy to know where you are in your code when you come back to the code editor.
 
 <figure>
