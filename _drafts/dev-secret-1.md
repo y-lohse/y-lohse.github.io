@@ -1,8 +1,7 @@
 ---
 layout: post
-title: Secret de dev épisode 1
-description: [fr] Comment devenir plutôt bon en programmation
-tags:
+title: Secret de dev episode 1
+description: Comment devenir plutôt bon en programmation
 published: false
 ---
 Ces dernières années, j'ai passé pas mal d'heures à aider des gens autour de moi à coder; camarades de promo, collègues, amis... Des personnes qui n'aiment pas fondamentalement coder mais qui savent se démmerder un peu. J'ai vu plusieurs de ces personnes essayer de se dépasser, de vraiment apprendre à coder. Et j'en ai vu tout autant arrêter rapidement, frustré.
