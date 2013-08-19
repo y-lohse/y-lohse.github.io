@@ -11,9 +11,9 @@ tags:
 - mirror
 published: false
 ---
-[Code Mirror](http://codemirror.net/) is this pretty sweet web based code editor, designed to be embedded. It's quite a technical achievment and it's no wonder that both [Brackets](http://brackets.io/) and [Light Table](http://www.lighttable.com/) are using it.
+[Code Mirror](http://codemirror.net/) is this pretty sweet web based code editor, designed to be embedded. It's quite a technical achievement and it's no wonder that both [Brackets](http://brackets.io/) and [Light Table](http://www.lighttable.com/) are using it.
 
-Theming is done via css; pretty much every significant word is put in a span with a class name, and you just apply your styles to those classes. The only troubble is I hav'nt found a good reference of which class names are applied to what. I've thrown a quick one together here for html, css and js.
+Theming is done via css; pretty much every significant word is put in a span with a class name, and you just apply your styles to those classes. The only troubble is I haven't found a good reference of which class names are applied to what. I've thrown a quick one together here for html, css and js.
 
 ## CSS
 
