@@ -9,7 +9,7 @@ tags:
 - code
 - backets
 - mirror
-published: false
+published: true
 ---
 [Code Mirror](http://codemirror.net/) is this pretty sweet web based code editor, designed to be embedded. It's quite a technical achievement and it's no wonder that both [Brackets](http://brackets.io/) and [Light Table](http://www.lighttable.com/) are using it.
 
