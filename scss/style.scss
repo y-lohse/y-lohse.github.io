@@ -346,10 +346,14 @@ figcaption a{
 	padding: 5px 8px;
 }
 
-//align list properyl
-.post-content ul,
-.post-content ol{
+.post-content li{
 	list-style-position: outside;
+	margin-bottom: 20px;
+	
+	@include width-matches($mobile){
+		margin-left: 1.3rem;
+		padding-left: 10px;
+	}
 }
 .post-content ol a,
 .post-content ul a{
@@ -396,7 +400,9 @@ figcaption a{
 	}
 }
 .post-content blockquote p{
-	text-indent: 3rem;
+	@include width-matches($mobile){
+		text-indent: 3rem;
+	}
 }
 
 //demos in posts
