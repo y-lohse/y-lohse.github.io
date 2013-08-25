@@ -262,6 +262,18 @@ figcaption a{
 	margin: 25px 0 5px;
 }
 
+.post-footer{
+	margin-top: 50px;
+	margin-bottom: 70px;
+	font-size: .9rem;
+}
+.post-footer .twitter:after{
+	float: right;
+	@extend %icon-font;
+	content: "\e002";
+	font-size: 1.1rem;
+}
+
 //illustrations
 .post-content p > img{
 	float: right;
