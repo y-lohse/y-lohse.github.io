@@ -55,7 +55,7 @@ La batarde, c'est une erreur de logique qui aboutie à une erreur de syntaxe. El
 
 Pour débuger l'esprit tranquille, il faut absolument que vous puissiez reproduire le bug autant de fois que vous le voulez. Les erreus de syntaxes sont simple à reproduire, elles ont normalement lieu à chaque éxécution. Pour les erreurs de logique, essayez de répéter les quelques actions qui ont précédé l'apparition du bug. Si le bug ne réaparait pas ce n'est pas que le problème est réglé, c'est que vous n'avez pas fait les bonnes actions. Essayez de remonter encore plus loin dans le temps; reproduisez les conditions exactes dans lequel le bug ets apparu la première fois. Les bugs qui apparraissent aléaoirement sont les plus durs à corriger.
 
-Ou presque. Ls pires sont ceux des jeux vidéo. Quand vous avez un bug qui n'apparait que quand vous tuez le boss de fin à la dernière seconde du niveau avec l'arme la plus moisie, c'est la merde.
+Ou presque. Les pires sont ceux des jeux vidéo. Quand vous avez un bug qui n'apparait que quand vous tuez le boss de fin à la dernière seconde du niveau avec l'arme la plus moisie, c'est la merde.
 
 ## Supprimer des facteurs
 
@@ -111,7 +111,7 @@ Typiquement, le [echo](http://php.net/manual/fr/function.echo.php) de PHP est na
 
 ### Ne faire qu'un avec le code source (rien à voir avec le Bouddhisme)
 
-Parfois, çaa ne suffis pas. Quand après 15-20 minutes à ajouter des mesages d'erreur un peu partout on ne comprend toujours pas ce qu'il se passe il faut passer à des méthodes plus pointues.
+Parfois, ça ne suffis pas. Quand après 15-20 minutes à ajouter des mesages d'erreur un peu partout on ne comprend toujours pas ce qu'il se passe il faut passer à des méthodes plus pointues.
 
 Beaucoup d'éditeurs de code offrent un méchanisme de point d'arrêt — des machines à voyager dans le temps. Vous définissez à partir de quel endroit dans votre code l'éxécution doit se mettre en pause, et une fois ce point atteint c'est vous qui êtes aux commandes. Vous décidez quand il faut passer à l'instruction suivante, vous pouvez voir toutes les variables et leurs valeurs, vous pouvez les modifier à volonté. Rien de mieux pour **tout** voir.
 
@@ -147,6 +147,6 @@ Si vous avez quelqu'un sachant coder sous la main, asseyez le devant votre probl
 
 ## Évitez le point de rupture
 
-Quand vous aurez trouvé l'origine du problème, la raison vous apparaitras très vite. Mais une fois corrigé, ne sautez pas de joie. En fait, ne vous attendez même pas à ce que ca fonctionne — les fausses joies de ce genre sont particulièrement décourageantes. Si tout fonctionne, parfait, affaire résolue. Mais souvent, ce que vous venez de corriger n'est qu'un maillon d'une chaîne. Apès une heure en immersion dans ce bug, vous aviez complétement oublié que vous vouliez juste le résoudre parce qu'il causait un *autre* bug. Ou maintenant que l'éxécution de votre programme ne s'arrête plus à ce bug, elle s'arrête quatres lignes plus loin.
+Quand vous aurez trouvé l'origine du problème, la raison vous apparaitra très vite. Mais une fois corrigé, ne sautez pas de joie. En fait, ne vous attendez même pas à ce que ca fonctionne — les fausses joies de ce genre sont particulièrement décourageantes. Si tout fonctionne, parfait, affaire résolue. Mais souvent, ce que vous venez de corriger n'est qu'un maillon d'une chaîne. Apès une heure en immersion dans ce bug, vous aviez complétement oublié que vous vouliez juste le résoudre parce qu'il causait un *autre* bug. Ou maintenant que l'éxécution de votre programme ne s'arrête plus à ce bug, elle s'arrête quatres lignes plus loin.
 
 Comptez deux heures de bugs pour une heure de code au début, mais à mesure que les 10 000 heures s'écouleront cette proportion se réduira. Et quand pour la première fois vous écrirez 200 lignes d'une traite et que tout fonctionnera parfaitement du premier coup, vous regarderez à nouveau l'écran d'un air dubitatif — mais plus pour la même raison.
