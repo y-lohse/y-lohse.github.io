@@ -385,6 +385,18 @@ figcaption a{
 		bottom: -1.5rem;
 		right: -1rem;
 	}
+	
+	@include width-matches($mobile){
+		&:before{
+			left: 0;
+		}
+		&:after{
+			display: none;
+		}
+	}
+}
+.post-content blockquote p{
+	text-indent: 3rem;
 }
 
 //demos in posts
