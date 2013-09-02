@@ -4,9 +4,10 @@ title: Baby-steps in Type Design
 description: 
 tags: 
 - typography
-- javascript
-- bookmarklet
-- vertical rythm
+- birdfont
+- font
+- type design
+- design
 published: true
 ---
 I don't remember exactly when I first got into typography, but it started way before I really started caring for design at all. I fell in love with the subtility of the art and got fascinated by the power and the beauty of these shapes. I have a horrible hand writing and I suck at drawing, but I always loved to sketch typefaces. I remember having fun with serifs even before I knew they were called serifs.
