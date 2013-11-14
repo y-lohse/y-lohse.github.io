@@ -13,9 +13,9 @@ They have mostly been built in a pre-responsive web era. The web has evolved a g
 
 I'm not sure.
 
-People are aware of this issue. I shared [my naïve thoughts on this](https://medium.com/design-ux/2234ce29b6f8). I'm essentially advocating inline editing, [but maybe I'm wrong](http://alistapart.com/column/wysiwtf). [Karen McGrane knows this shit,](http://karenmcgrane.com/2012/09/04/adapting-ourselves-to-adaptive-content-video-slides-and-transcript-oh-my/) she's been talking about it for some time now. [Mark Boulton](http://www.markboulton.co.uk/journal/wysiwtfftwomg) has thoughts on this as well. 
+People are aware of this issue. I shared [my naïve thoughts on this](https://medium.com/design-ux/2234ce29b6f8). I'm essentially advocating inline editing, [but maybe I'm wrong](http://alistapart.com/column/wysiwtf). [Karen McGrane knows this shit,](http://karenmcgrane.com/2012/09/04/adapting-ourselves-to-adaptive-content-video-slides-and-transcript-oh-my/) she's been talking about it for some time now. [Mark Boulton](http://www.markboulton.co.uk/journal/wysiwtfftwomg) has thoughts on this as well.
 
-But that's actually only the content strategy part of the problem. I've heard of lots of new CMSs that are being built right now and try to solve this problem, so we're probably okay on that.
+But that's actually only the content strategy part of the problem. I've heard of lots of new CMSs that are being built right now and try to solve this problem, so we're probably okay on that. [See Rasmus Skjoldan & Typo3 Neos](http://rasmusskjoldan.com/post/58364140673/wysiftw).
 
 ## What else is to be done?
 
