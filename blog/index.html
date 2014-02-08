@@ -29,7 +29,7 @@ description: My personnal blog. Tech related posts, design related articles.
 
 <nav class="pagination">
 	{% if paginator.previous_page %}
-	<a href="/blog/{{ paginator.previous_page_path; }}" class="previous">
+	<a href="{{ paginator.previous_page_path; }}" class="previous">
 		page {{ paginator.previous_page }}
 	</a>
 	{% endif %}
@@ -39,7 +39,7 @@ description: My personnal blog. Tech related posts, design related articles.
 	</span>
 	
 	{% if paginator.next_page %}
-	<a href="/blog/{{ paginator.next_page_path; }}" class="next">
+	<a href="{{ paginator.next_page_path; }}" class="next">
 		page {{ paginator.next_page }}
 	</a>
 	{% endif %}
