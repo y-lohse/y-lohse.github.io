@@ -3,23 +3,23 @@ layout: default
 title: blog@yannick-lohse
 description: My personnal blog. Tech related posts, design related articles.
 ---
-<h1 class="title">
+<h1 class="normal f1 sans-serif">
 	Blog
 </h1>
-<ul class="post-list">
+<ul class="list pa0">
 	{% for post in paginator.posts %}
-	<li class="post">
-		<h2 class="post-title">
-			<a href="{{ post.url }}" class="post-title-link">
+	<li class="pv2">
+		<h2 class="pa0 mv1 f2 lh-title sans-serif normal">
+			<a href="{{ post.url }}" class="no-underline near-black">
 				{{ post.title }}
 			</a>
 		</h2>
-		<span class="post-date">
+		<span class="f5">
 			{{ post.date |  date_to_string }}
 		</span>
-		<div class="post-description">
+		<div class="mv3 f5">
 			{{ post.description }}
-			<a href="{{ post.url }}" class="post-link">
+			<a href="{{ post.url }}" class="blue">
 				Full article
 			</a>
 		</div>
@@ -27,20 +27,20 @@ description: My personnal blog. Tech related posts, design related articles.
 	{% endfor %}
 </ul>
 
-<nav class="pagination">
+<nav class="">
 	{% if paginator.previous_page %}
-	<a href="{{ paginator.previous_page_path; }}" class="previous">
-		page {{ paginator.previous_page }}
+	<a href="{{ paginator.previous_page_path; }}" class="blue">
+		{{ paginator.previous_page }} &lt;&lt;
 	</a>
 	{% endif %}
 	
-	<span class="page-counter">
+	<span class="">
 		{{ paginator.page }} / {{ paginator.total_pages }}
 	</span>
 	
 	{% if paginator.next_page %}
-	<a href="{{ paginator.next_page_path; }}" class="next">
-		page {{ paginator.next_page }}
+	<a href="{{ paginator.next_page_path; }}" class="blue">
+		&gt;&gt;{{ paginator.next_page }}
 	</a>
 	{% endif %}
 </nav>

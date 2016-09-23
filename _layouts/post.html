@@ -1,21 +1,21 @@
 {% include header.html %}
-<div class="container main post" role="main">
+<div class="mw5 mw7-ns center pa3 ph5-ns" role="main">
 	{% include homelink.html %}
 	{% include bloglink.html %}
-	<header>
-		<h1>
+	<header class="mv4">
+		<h1 class="sans-serif normal f1 lh-title mv1">
 			{{ page.title }}
 		</h1>
-		<span class="post-date">
+		<span class="f4">
 			{{ page.date |  date: "%B %d, %Y" }}
 		</span>
 	</header>
-	<div class="post-content">
+	<div class="mv3">
 		{{ content }}
 	</div>
-	<div class="post-footer">
-		<p class="twitter">
-			Thoughts or feedbacks? <a href="https://twitter.com/intent/tweet?text=@y-lohse%20&related=y-lohse&url=http://yannick-lohse.fr{{ page.url }}">You should tweet them</a>.
+	<div class="mt5">
+		<p class="">
+			I don't host a comment system, so maybe <a href="https://twitter.com/intent/tweet?text=@y-lohse%20&related=y-lohse&url=http://yannick-lohse.fr{{ page.url }}" class="blue">tweet them</a> or something.
 		</p>
 </div>
 {% include footer.html %}

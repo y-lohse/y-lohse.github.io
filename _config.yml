@@ -2,9 +2,14 @@ exclude: ['scss', 'serve.bat']
 paginate_path: /blog/page:num
 paginate: 8
 
+gems: [jekyll-paginate]
+
 markdown: rdiscount
 
 img_path: /assets
 prettify_js: <!--?prettify lang=js linenums=true?-->
 prettify_css: <!--?prettify lang=css linenums=true?-->
 prettify_html: <!--?prettify lang=html linenums=true?-->
+
+sass:
+    sass_dir: css
