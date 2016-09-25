@@ -1,5 +1,6 @@
 ---
 ---
+@import "./tachyons.scss";
 
 html{
 	font-family: "museo", Arial;
@@ -29,6 +30,26 @@ hr{
 		text-align: center;
 		color: black;
 		border-radius: 50%;
+	}
+}
+
+//extending tachyons
+a{
+	@extend .blue;
+}
+.post-content{
+	h1,h2,h4,h4,h5,h6{
+		@extend .normal;
+	}
+	p{
+		@extend .lh-copy;
+	}
+	blockquote{
+		@extend .ph0; 
+		@extend .f4;
+		@extend .f4-ns;
+		@extend .measure-narrow;
+		@extend .center;
 	}
 }
 
