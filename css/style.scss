@@ -55,8 +55,38 @@ a{
 
 
 .cv-section{
+	@extend .mb5;
+	
 	ul > li{
 		@extend .pv1;
+	}
+}
+.cv-block{
+	@extend .cf;
+	@extend .mv4;
+	
+	> h2{
+		@extend .fl;
+		@extend .w-100;
+		@extend .w-20-ns;
+		@extend .ma0;
+		@extend .mb2;
+		@extend .pr2;
+		@extend .tr-ns;
+		@extend .f4;
+	}
+	> ul{
+		@extend .fl;
+		@extend .w-100;
+		@extend .w-75-ns;
+		@extend .list;
+		@extend .pl2;
+		@extend .bl;
+		@extend .bw1;
+	}
+	
+	.smaller{
+		@extend .f5-l;
 	}
 }
 
