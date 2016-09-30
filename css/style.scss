@@ -54,7 +54,10 @@ a{
 }
 
 
-.cv{
+.cv-section{
+	ul > li{
+		@extend .pv1;
+	}
 }
 
 //icomoonstuff
