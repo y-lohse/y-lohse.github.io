@@ -7,8 +7,9 @@ next_title: Creating web maps as an intern
 ---
 Back in 2005 while I was going through highschool I lacked any of the skills required to build something from the ground up. So instead, I spent a lot of time playing online games – escpecially one called [Travian](http://www.travian.fr/). Not only playing though, I also spent countless hours on the [community boards](http://forum.travian.fr/) and on the IRC channel helping newcomers understanding the finer aspects of the game.
 
-<figure>
 ![Screenshot of travian](../assets/2012/08/def-famille.jpg)
+
+<figure>
 <figcaption>
 Travian used to look like this.
 </figcaption>
