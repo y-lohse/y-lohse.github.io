@@ -12,12 +12,10 @@ In 2013, they decided their [old website](https://web.archive.org/web/2008081802
 
 Upon their request, the first phase of the project was to be theoretical only. We went through the usual process of analyzing the current website, the competitors, etc. We created a few personas and identified what the new website should achieve, and concluded with a recommended page list and organisation.
 
-<figure>
 ![A wireframe view of the new homepage]({{ site.img_path }}/2016/09/ods-wire.png)
 <figcaption>
 A wireframe view of the new homepage
 </figcaption>
-</figure>
 
 This went all very well and everything was approved after 3 months. And then... we waited. The problem with an organisation that has no full time employee and runs a few big events is that they have about 3 month every year where they can do actual work. The rest of the time, they are either knee deep into event management, or on holliday. This would become a recuring theme during the project, with more than a few month were absolutely nothing happened.
 
@@ -30,12 +28,10 @@ But the new design was using the old style guide, which hadn't aged very well. R
 
 Once the new brand identity completed, things went a lot smoother. Loïc revised the design, got it approved, and I went to the coding furnace.
 
-<figure>
 ![The new Office des Sports website]({{ site.img_path }}/2016/09/ods-1.png)
 <figcaption>
 The final design
 </figcaption>
-</figure>
 
 The whole website is based on WordPress, a platform I knew [quite well](/work/tdf.html) by then. It has about 10 different page models and the home page can switch between 3 different layours based on what needs to be currently advertised. Most things were relatively easy to do, with the sole exception of [the search engine for the clubs](http://ods67.com/faire-du-sport/).
 
