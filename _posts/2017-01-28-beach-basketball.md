@@ -1,3 +1,8 @@
+---
+layout: post
+title: Beach basketball
+published: true
+---
 A few years ago, I accidentally designed a very fun game with a friend of mine. We've never shared it anywhere which is a bit of a shame, because there's a certain elegance to it's simplicity and natural balance. I'm calling it beach basketball, because it's like basketball and we played it on the beach. But you could play it anywhere.
 
 All you need is two players and a ball, ideally made of platic or some other material that's not too hard. It's also better if it's roughly basket-ball sized, but anything smaller will also do.
