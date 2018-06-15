@@ -95,7 +95,7 @@ Anyway, someone in each team started collecting the cards, and trying to de-sham
 - CS : cpu.cozy.cloud / 53 52 45 54 55 50 4d 4f 43
 - Secret holders : hidden13.cozy.cloud / FRPERGF
 - Secret breakers : investigate.cozy.cloud / [the bear riddle](https://io9.gizmodo.com/think-you-know-the-solution-to-this-classic-riddle-thi-1648069908)
-- Unifiers: unity.cozy.cloud / https://gist.github.com/y-lohse/b40feccf2b1ce6272ba253d94ed8ba91/archive/8948f616e339a50d85ebb935ee3e01502c2fc4b7.zip
+- Unifiers: unity.cozy.cloud / [this file](https://gist.github.com/y-lohse/b40feccf2b1ce6272ba253d94ed8ba91/archive/8948f616e339a50d85ebb935ee3e01502c2fc4b7.zip)
 
 One bit of game design that worked exactly as we hoped was that some teams tried to use their password hint as the actual passwords. They had just (finally!) combined their fragments, found the URL and felt really close to the goal… only to be told the password was wrong. In hindsight again, it would have been better if all hints were made to look like actual passwords.
 
