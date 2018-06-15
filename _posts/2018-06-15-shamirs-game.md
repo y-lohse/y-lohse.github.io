@@ -45,7 +45,7 @@ The teams were randomized and the point was to give everyone a reason to chat wi
 In hindsight, we should *not* have given out the cards just before starting the first round of meetings, since everyone became much more interested in finding their team mates than starting actual work :D.  
 Other than that, it worked realtively well — people shared their identities and started forming theories about how they could be related. If you haven't figured out the teams yet, here they are:
 
-#### Mathematicians
+### Mathematicians
 
  - Katherine Johnson 
  - Cedric Villani 
@@ -53,7 +53,7 @@ Other than that, it worked realtively well — people shared their identities an
  - Evariste Galois 
  - Thales
  
- #### Computer scientist
+ ### Computer scientist
 
 - Ada Lovelace 
 - Margareth Hamilton 
@@ -61,7 +61,7 @@ Other than that, it worked realtively well — people shared their identities an
 - Grace Hopper 
 - Edsger Dijkstra
 
-#### Secret holders
+### Secret holders
 
 - Diana Prince 
 - Jean Moulin 
@@ -69,7 +69,7 @@ Other than that, it worked realtively well — people shared their identities an
 - Philippe Charuel 
 - Mata Hari
 
-#### Secret breakers
+### Secret breakers
 
 - Benjamin Gates 
 - Sherlock Holmes 
@@ -77,7 +77,7 @@ Other than that, it worked realtively well — people shared their identities an
 - Robert Langdon 
 - Veronica Mars
 
-#### Unifiers
+### Unifiers
 
 - Nelson Mandela 
 - Helmut Kohl 
