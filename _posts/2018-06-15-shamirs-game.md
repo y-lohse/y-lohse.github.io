@@ -4,7 +4,7 @@ title: Shamir's Game
 published: true
 ---
 
-While most of us at Cozy Cloud work remotely, we have a team day every 6 weeks in Paris. On top of regular work meetings, we make sure there's always a team-building activity going on, and these [have become more and more elaborate](https://twitter.com/y_lohse/status/1004377312366944256). This week, it was my turn to run the day and here's what we came up with.
+While most of us at [Cozy Cloud](https://cozy.io) work remotely, we have a team day every 6 weeks in Paris. On top of regular work meetings, we make sure there's always a team-building activity going on, and these [have become more and more elaborate](https://twitter.com/y_lohse/status/1004377312366944256). This week, it was my turn to run the day and here's what we came up with.
 
 Part of our team is working on a technique called [Shamir's secret](https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing), where you transform a secret into several fragments. Those fragments hold no information, but reunite enough of them, and you can reconstruct the initial secret. Ever since I heard about it, I thought it'd be interesting to incorporate that into a treasure hunt type of game, so we did that.
 
@@ -53,7 +53,7 @@ Other than that, it worked realtively well — people shared their identities an
  - Evariste Galois 
  - Thales
  
- ### Computer scientist
+### Computer scientists
 
 - Ada Lovelace 
 - Margareth Hamilton 
@@ -85,7 +85,7 @@ Other than that, it worked realtively well — people shared their identities an
 - Abraham Lincoln 
 - Simón Bolívar
 
-There were some traps in tehre which mostly worked out. Most computer scientists were also pretty good at math, so that was a challenge. The spy section of the secret holders got together quickly, but had more trouble finding the non-spy members. One funny moment was (I think) Margareth Hamilton loudly proclaming "Maybe we are women in CS?" and a minute later Alan Turing saying "I think we are computer scientists..?", but it took both of them another 10 minutes to talk to each other.
+There were some traps in there which mostly worked out. Most computer scientists were also pretty good at math, so that was a challenge. The spy section of the secret holders got together quickly, but had more trouble finding the non-spy members. One funny moment was (I think) Margareth Hamilton loudly proclaming "Maybe we are women in CS?" and a minute later Alan Turing saying "I think we are computer scientists..?", but it took both of them another 10 minutes to talk to each other.
 
 # Phase 2 : Solving the riddle
 
