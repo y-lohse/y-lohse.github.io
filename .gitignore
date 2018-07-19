@@ -1,5 +1,6 @@
 scss/config/*
 _site/*
+.sass-cache
 
 #################
 ## Eclipse
