@@ -3,10 +3,11 @@ layout: work
 title: Caldera
 description: Developer and designer at Caldera
 ---
-I'm working for a company called [Caldera](www.caldera.com/) since may 2013. SInce it's still ongoing, I can't talk to much about it here.
+I worked for a company called [Caldera](www.caldera.com/) from 2013 to 2017. Their core activity is to provide software for large format printers — drivers, workflow management, etc.
 
-My role there is two-fold. First, we don't have a dedicated design team, so as one of the few design-minded devs there, I participate in a lot of decisions when it comes to the UI and UX of our new products.
+My first missions where mostly about design and front-end work. There was no dedicated design team, so as one of the few design-minded devs there I participated in a lot of decisions when it came to the UI and UX of new products.
 
-Secondly, I was — at the time I joined — the only developer on the team fluent with everyhting related to HTML5. Aside from smaller projects, I was the lead developer on several cross-platform software products. I wrote two rather large applications entirely in javascript (mostly with [angular.js](https://angularjs.org/)) and shipped them on major platforms using [nw.js](http://nwjs.io/) and [Cordova](https://cordova.apache.org/).
+After a couple of months, I was put in charge of the development of two rather large applications. I can't talk about one of them, but the other was a new GUI for Caldera's engine built entirely in HTML5 and javascript. I built the UI with [angular.js](https://angularjs.org/) and the communication was done over regular HTTP calls as well as WebSockets, which were kind of new at the time. I shipped this app on all major platforms using [nw.js](http://nwjs.io/) and [Cordova](https://cordova.apache.org/).
 
-These days, I'm spear-heading our efforts to offer cloud-based solutions. This includes another large HTML5 application as well as a lot of back-end code, both in PHP and node.js. I also get my hands dirty with deployments, using a mixture of Amazon Web Services and home-rolled Docker containers.
+During my last years at Caldera, I spear-headed our efforts to transition to cloud-based solutions. This involved creating a fully fledged workflow management system for which I not only designed and built the GUI, but also wrote the back-end code that powered it using PHP and Node.js.
+For this project, I also set up our cloud architecture using a mixture of Amazon Web Services and home-rolled Docker containers. Finally, I helped our team adopt a more agile approach for the development of this product and was largely involved in product decisions and providing help to the support and sales team.
