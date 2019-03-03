@@ -29,18 +29,18 @@ description: My personnal blog. Tech related posts, design related articles.
 
 <nav class="">
 	{% if paginator.previous_page %}
-	<a href="{{ paginator.previous_page_path; }}" class="blue">
-		{{ paginator.previous_page }} &lt;&lt;
+	<a href="{{ paginator.previous_page_path }}" class="blue">
+		&lt;&lt;
 	</a>
 	{% endif %}
-	
+
 	<span class="">
 		{{ paginator.page }} / {{ paginator.total_pages }}
 	</span>
-	
+
 	{% if paginator.next_page %}
-	<a href="{{ paginator.next_page_path; }}" class="blue">
-		&gt;&gt;{{ paginator.next_page }}
+	<a href="{{ paginator.next_page_path }}" class="blue">
+		&gt;&gt;
 	</a>
 	{% endif %}
 </nav>
