@@ -16,9 +16,9 @@ hr{
 	margin: 40px auto;
 	border: none;
 	height: $size;
-	
+
 	@extend .icon-mobius;
-	
+
 	&:before{
 		display: block;
 		width: $size;
@@ -45,7 +45,7 @@ a{
 		@extend .lh-copy;
 	}
 	blockquote{
-		@extend .ph0; 
+		@extend .ph0;
 		@extend .f4;
 		@extend .f4-ns;
 		@extend .measure-narrow;
@@ -56,7 +56,7 @@ a{
 
 .cv-section{
 	@extend .mb5;
-	
+
 	ul > li{
 		@extend .pv1;
 	}
@@ -64,7 +64,7 @@ a{
 .cv-block{
 	@extend .cf;
 	@extend .mv4;
-	
+
 	> h2{
 		@extend .fl;
 		@extend .w-100;
@@ -84,7 +84,7 @@ a{
 		@extend .bl;
 		@extend .bw1;
 	}
-	
+
 	.smaller{
 		@extend .f5-l;
 	}
@@ -114,11 +114,11 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
 .icon-github:before,
-.icon-twitter:before, 
-.icon-file-pdf:before, 
-.icon-linkedin:before, 
-.icon-file-css:before, 
-.icon-book:before, 
+.icon-twitter:before,
+.icon-file-pdf:before,
+.icon-linkedin:before,
+.icon-file-css:before,
+.icon-book:before,
 .icon-pen:before,
 .icon-mobius:before,
 .icon-user:before {
@@ -150,4 +150,14 @@ you can use the generic selector below, but it's slower:
 }
 .icon-user:before {
 	content: "\e008";
+}
+
+@media print {
+	.cv-portrait {
+		max-width: 10rem;
+	}
+
+	.home-link {
+		display: none;
+	}
 }
