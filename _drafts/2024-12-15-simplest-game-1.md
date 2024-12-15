@@ -32,3 +32,5 @@ First, we implement an acceleration and deceletation rate. To do this we use the
 Once we have done that, we must give the car the ability to start breaking ahead of the corner – otherwise it just starts braking as it hits the corner. While we're at it, we can also let the car accelerate out of the corner once it's past the apex. Like everything else so far, we're oversimplifying things a good deal and will need to revisit this later.
 
 With all this in place, we have the very basis of our sim: a car driving somewhat realistically around a track!
+
+video 2
